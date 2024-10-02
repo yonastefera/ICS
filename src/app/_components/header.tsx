@@ -21,16 +21,16 @@ import { useState } from "react";
 import  NextLink from "next/link";
 import { usePathname } from "next/navigation";
 
+export const headerLinks = [
+  { label: "Home", href: "/" },
+  { label: "About us", href: "/about-us" },
+  { label: "Services", href: "/services" },
+  { label: "Contact", href: "/contact" },
+];
 export const Header = () => {
   const pathName = usePathname();
 
   const [menuShown, setMenuShown] = useState(false);
-  const links = [
-    { label: "Home", href: "/" },
-    { label: "About us", href: "/about" },
-    { label: "Services", href: "/services" },
-    { label: "Contact", href: "/contact" },
-  ];
 
   return (
     <Box
@@ -62,7 +62,7 @@ export const Header = () => {
 
             <Stack alignItems={"center"} gap={3}>
               <Stack gap={2.5} display={{ xs: "none", md: "flex" }}>
-                {links.map((link) => (
+                {headerLinks.map((link) => (
                   <Button
                     variant="text"
                     color="secondary"
@@ -94,7 +94,7 @@ export const Header = () => {
       <Drawer open={menuShown} onClose={() => setMenuShown(false)} anchor="top">
         <Box sx={{ width: "auto" }}>
           <List>
-            {links.map((link) => (
+            {headerLinks.map((link) => (
               <ListItem key={link.label} disablePadding>
                 <ListItemButton LinkComponent={NextLink} href={link.href}>
                   <ListItemText>{link.label}</ListItemText>

@@ -17,7 +17,6 @@ import Grid from "@mui/material/Grid2";
 import Image from "next/image";
 import { ServiceCard } from "./_components/service-card";
 import SquareIcon from "@mui/icons-material/Square";
-import { NewsLetter } from "./_components/news-letter";
 import { Testimonials } from "./_components/testimonials";
 import services from "../data/service-data.json";
 
@@ -304,52 +303,6 @@ export default function Home() {
         <Box sx={{ my: 4 }}>
           <Testimonials />
         </Box>
-      </Container>
-
-      <Box
-        sx={{
-          bgcolor: "black",
-          backgroundImage: "url(/images/footer-bg.jpeg)",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          position: "relative",
-          py: 6,
-          my: 16,
-        }}
-      >
-        <Box
-          sx={{
-            bgcolor: "black",
-            position: "absolute",
-            inset: 0,
-            opacity: 0.15,
-          }}
-        />
-        <Container sx={{ position: "relative" }}>
-          <NewsLetter />
-        </Container>
-      </Box>
-
-      <Container sx={{ my: 16 }}>
-        <Stack
-          alignItems={"center"}
-          sx={{
-            borderBottom: (theme) => `1px solid ${theme.palette.primary.main}`,
-            display: "inline-flex",
-          }}
-          gap={2}
-        >
-          <Typography
-            sx={{ fontSize: { xs: "10vw", md: "4.5vw" }, fontWeight: "bold" }}
-            color="primary"
-          >
-            LET’S TALK!
-          </Typography>
-          <ArrowOutwardIcon
-            color="primary"
-            sx={{ fontSize: { xs: "10vw", md: "4.5vw" } }}
-          />
-        </Stack>
       </Container>
     </>
   );
