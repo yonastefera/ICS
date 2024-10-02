@@ -1,4 +1,5 @@
 "use client";
+
 import {
   AppBar,
   Box,
@@ -17,15 +18,20 @@ import {
 import ArrowOutwardIcon from "@mui/icons-material/ArrowOutward";
 import MenuIcon from "@mui/icons-material/Menu";
 import { useState } from "react";
+import  NextLink from "next/link";
+import { usePathname } from "next/navigation";
 
 export const Header = () => {
+  const pathName = usePathname();
+
   const [menuShown, setMenuShown] = useState(false);
   const links = [
-    { label: "Home" },
-    { label: "About us" },
-    { label: "Services" },
-    { label: "Contact" },
+    { label: "Home", href: "/" },
+    { label: "About us", href: "/about" },
+    { label: "Services", href: "/services" },
+    { label: "Contact", href: "/contact" },
   ];
+
   return (
     <Box
       sx={{
@@ -40,7 +46,7 @@ export const Header = () => {
         sx={{ bgcolor: "black", position: "absolute", inset: 0, opacity: 0.15 }}
         component="header"
       ></Box>
-      <AppBar position="static" sx={{ bgcolor: "transparent" }}>
+      <AppBar position="static" sx={{ bgcolor: "transparent" }} elevation={0}>
         <Container sx={{ position: "relative" }}>
           <Toolbar
             sx={{
@@ -56,18 +62,17 @@ export const Header = () => {
 
             <Stack alignItems={"center"} gap={3}>
               <Stack gap={2.5} display={{ xs: "none", md: "flex" }}>
-                <Button variant="text" color="secondary">
-                  Home
-                </Button>
-                <Button variant="text" color="secondary">
-                  About us
-                </Button>
-                <Button variant="text" color="secondary">
-                  Services
-                </Button>
-                <Button variant="text" color="secondary">
-                  Contact us
-                </Button>
+                {links.map((link) => (
+                  <Button
+                    variant="text"
+                    color="secondary"
+                    key={`desktop-${link.href}`}
+                    component={NextLink}
+                    href={link.href}
+                  >
+                    {link.label}
+                  </Button>
+                ))}
               </Stack>
 
               <Button variant="outlined" color="secondary" size="large">
@@ -91,7 +96,7 @@ export const Header = () => {
           <List>
             {links.map((link) => (
               <ListItem key={link.label} disablePadding>
-                <ListItemButton>
+                <ListItemButton LinkComponent={NextLink} href={link.href}>
                   <ListItemText>{link.label}</ListItemText>
                 </ListItemButton>
               </ListItem>
@@ -100,7 +105,7 @@ export const Header = () => {
         </Box>
       </Drawer>
 
-      <Hero />
+      {pathName === "/" && <Hero />}
     </Box>
   );
 };
@@ -143,3 +148,5 @@ export const Hero = () => {
     </Container>
   );
 };
+
+

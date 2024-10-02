@@ -11,19 +11,21 @@ import {
 } from "@mui/material";
 import ArrowOutwardIcon from "@mui/icons-material/ArrowOutward";
 import Image from "next/image";
+import NextLink from "next/link";
 
 export const ServiceCard: React.FC<{
   title: string;
   description: string;
   order: string;
   image: string;
-}> = ({ title, description, order, image }) => {
+  id: string;
+}> = ({ title, description, order, image, id }) => {
   const theme = useTheme();
   return (
     <>
       <Card
         elevation={0}
-        sx={{ bgcolor: theme.palette.primary.dark, height: "100%", borderRadius: '12px' }}
+        sx={{ bgcolor: '#082158', height: "100%", borderRadius: '12px' }}
       >
         <CardContent
           sx={{
@@ -57,6 +59,8 @@ export const ServiceCard: React.FC<{
               variant="text"
               endIcon={<ArrowOutwardIcon />}
               color="secondary"
+              component={NextLink}
+              href={`/services?panel=${id}#${id}`}
             >
               Explore More
             </Button>

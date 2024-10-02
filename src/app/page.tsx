@@ -19,6 +19,7 @@ import { ServiceCard } from "./_components/service-card";
 import SquareIcon from "@mui/icons-material/Square";
 import { NewsLetter } from "./_components/news-letter";
 import { Testimonials } from "./_components/testimonials";
+import services from "../data/service-data.json";
 
 export default function Home() {
   return (
@@ -181,30 +182,17 @@ export default function Home() {
         </Stack>
 
         <Grid container spacing={2} mt={6}>
-          <Grid size={{ xs: 12, md: 4 }}>
-            <ServiceCard
-              title="Software Engineering"
-              description="Develop tailored software applications to streamline business processes, automate repetitive..."
-              order="01"
-              image="/images/service-icons/software-engineering.png"
-            />
-          </Grid>
-          <Grid size={{ xs: 12, md: 4 }}>
-            <ServiceCard
-              title="Cyber Security"
-              description="Implement robust cybersecurity measures, including advanced threat detection, encryption, and regular security audits..."
-              order="02"
-              image="/images/service-icons/cyber-security.png"
-            />
-          </Grid>
-          <Grid size={{ xs: 12, md: 4 }}>
-            <ServiceCard
-              title="Cloud Migration"
-              description="Enable clients to harness the power of the cloud for scalable and flexible IT infrastructure..."
-              order="03"
-              image="/images/service-icons/cloud-migration.png"
-            />
-          </Grid>
+          {services.slice(0, 3).map((service, index) => (
+            <Grid size={{ xs: 12, md: 4 }}>
+              <ServiceCard
+                title={service.name}
+                description={service.descriptions[0]}
+                order={`0${index + 1}`}
+                image={service.icon ?? ""}
+                id={service.id}
+              />
+            </Grid>
+          ))}
         </Grid>
       </Container>
 
@@ -357,7 +345,10 @@ export default function Home() {
           >
             LET’S TALK!
           </Typography>
-          <ArrowOutwardIcon color="primary" sx={{ fontSize: { xs: "10vw", md: "4.5vw" } }} />
+          <ArrowOutwardIcon
+            color="primary"
+            sx={{ fontSize: { xs: "10vw", md: "4.5vw" } }}
+          />
         </Stack>
       </Container>
     </>

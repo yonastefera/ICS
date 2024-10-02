@@ -1,0 +1,255 @@
+[
+    {
+      "id": "software_engineering",
+      "name": "Software Engineering",
+      "icon": "/images/service-icons/software-engineering.png",
+      "descriptions": [
+        "Develop tailored software applications to streamline business processes, automate repetitive...",
+        "Equipped with in-depth expertise in cloud platforms and industry best practices, we empower your organization to seamlessly integrate cloud services into your digital infrastructure, unlocking a spectrum of transformative benefits.",
+        "Embrace the possibilities with ICS Cloud Migration, where seamless integration meets elevated performance, propelling your digital landscape to new heights of agility and innovation."
+      ],
+      "details": [
+        {
+          "title": "Modernization & Transformation",
+          "description":
+            "Involves updating and enhancing existing systems to leverage contemporary technologies."
+        },
+        {
+          "title": "IT Strategy Development",
+          "description":
+            "Crafting tailored digital strategies to align with your business objectives."
+        },
+        {
+          "title": "Cloud Computing Solutions",
+          "description":
+            "Enhanced scalability, flexibility, and cost-efficiency using cloud infrastructure."
+        },
+        {
+          "title": "Data Analytics and Business Intelligence",
+          "description":
+            "Transforming data into actionable insights to inform decision-making and improve business outcomes."
+        },
+        {
+          "title": "Cybersecurity Enhancement",
+          "description":
+            "Implementing robust security measures to protect your digital assets and ensure compliance with industry standards."
+        },
+        {
+          "title": "Modernizing Legacy Systems",
+          "description":
+            "Upgrading and integrating old systems with cutting-edge technologies to boost efficiency and competitiveness."
+        },
+        {
+          "title": "Automation and AI Integration",
+          "description": "Continuous Support and Training"
+        },
+        {
+          "title": "Continuous Support and Training",
+          "description":
+            "Offering ongoing technical support and training to ensure seamless adoption of new technologies and maximize the return on digital investments."
+        }
+      ]
+    },
+    {
+      "id": "cyber_security",
+      "name": "Cyber Security",
+      "icon": "/images/service-icons/cyber-security.png",
+      "descriptions": [
+       "Implement robust cybersecurity measures, including advanced threat detection, encryption, and regular security audits...",
+        "Equipped with in-depth expertise in cloud platforms and industry best practices, we empower your organization to seamlessly integrate cloud services into your digital infrastructure, unlocking a spectrum of transformative benefits.",
+        "Embrace the possibilities with ICS Cloud Migration, where seamless integration meets elevated performance, propelling your digital landscape to new heights of agility and innovation."
+      ],
+      "details": [
+        {
+          "title": "Modernization & Transformation",
+          "description":
+            "Involves updating and enhancing existing systems to leverage contemporary technologies."
+        },
+        {
+          "title": "IT Strategy Development",
+          "description":
+            "Crafting tailored digital strategies to align with your business objectives."
+        },
+        {
+          "title": "Cloud Computing Solutions",
+          "description":
+            "Enhanced scalability, flexibility, and cost-efficiency using cloud infrastructure."
+        },
+        {
+          "title": "Data Analytics and Business Intelligence",
+          "description":
+            "Transforming data into actionable insights to inform decision-making and improve business outcomes."
+        },
+        {
+          "title": "Cybersecurity Enhancement",
+          "description":
+            "Implementing robust security measures to protect your digital assets and ensure compliance with industry standards."
+        },
+        {
+          "title": "Modernizing Legacy Systems",
+          "description":
+            "Upgrading and integrating old systems with cutting-edge technologies to boost efficiency and competitiveness."
+        },
+        {
+          "title": "Automation and AI Integration",
+          "description": "Continuous Support and Training"
+        },
+        {
+          "title": "Continuous Support and Training",
+          "description":
+            "Offering ongoing technical support and training to ensure seamless adoption of new technologies and maximize the return on digital investments."
+        }
+      ]
+    },
+    {
+      "id": "cloud_migration",
+      "name": "Cloud Migration",
+      "icon":"/images/service-icons/cloud-migration.png",
+      "descriptions": [
+        "Enable clients to harness the power of the cloud for scalable and flexible IT infrastructure...",
+        "Equipped with in-depth expertise in cloud platforms and industry best practices, we empower your organization to seamlessly integrate cloud services into your digital infrastructure, unlocking a spectrum of transformative benefits.",
+        "Embrace the possibilities with ICS Cloud Migration, where seamless integration meets elevated performance, propelling your digital landscape to new heights of agility and innovation."
+      ],
+      "details": [
+        {
+          "title": "Modernization & Transformation",
+          "description":
+            "Involves updating and enhancing existing systems to leverage contemporary technologies."
+        },
+        {
+          "title": "IT Strategy Development",
+          "description":
+            "Crafting tailored digital strategies to align with your business objectives."
+        },
+        {
+          "title": "Cloud Computing Solutions",
+          "description":
+            "Enhanced scalability, flexibility, and cost-efficiency using cloud infrastructure."
+        },
+        {
+          "title": "Data Analytics and Business Intelligence",
+          "description":
+            "Transforming data into actionable insights to inform decision-making and improve business outcomes."
+        },
+        {
+          "title": "Cybersecurity Enhancement",
+          "description":
+            "Implementing robust security measures to protect your digital assets and ensure compliance with industry standards."
+        },
+        {
+          "title": "Modernizing Legacy Systems",
+          "description":
+            "Upgrading and integrating old systems with cutting-edge technologies to boost efficiency and competitiveness."
+        },
+        {
+          "title": "Automation and AI Integration",
+          "description": "Continuous Support and Training"
+        },
+        {
+          "title": "Continuous Support and Training",
+          "description":
+            "Offering ongoing technical support and training to ensure seamless adoption of new technologies and maximize the return on digital investments."
+        }
+      ]
+    },
+    {
+        "id": "enterprise_it_solutions",
+        "name": "Enterprise IT Solutions",
+        "descriptions": [
+          "Our unwavering commitment lies in simplifying the migration process, ensuring a seamless transition that aligns with your unique business objectives. Whether you seek enhanced scalability, cost optimization, or seamless collaboration, our team of seasoned experts will meticulously guide you through every step of the cloud migration process, unlocking the full potential of cloud technologies.",
+          "Equipped with in-depth expertise in cloud platforms and industry best practices, we empower your organization to seamlessly integrate cloud services into your digital infrastructure, unlocking a spectrum of transformative benefits.",
+          "Embrace the possibilities with ICS Cloud Migration, where seamless integration meets elevated performance, propelling your digital landscape to new heights of agility and innovation."
+        ],
+        "details": [
+          {
+            "title": "Modernization & Transformation",
+            "description":
+              "Involves updating and enhancing existing systems to leverage contemporary technologies."
+          },
+          {
+            "title": "IT Strategy Development",
+            "description":
+              "Crafting tailored digital strategies to align with your business objectives."
+          },
+          {
+            "title": "Cloud Computing Solutions",
+            "description":
+              "Enhanced scalability, flexibility, and cost-efficiency using cloud infrastructure."
+          },
+          {
+            "title": "Data Analytics and Business Intelligence",
+            "description":
+              "Transforming data into actionable insights to inform decision-making and improve business outcomes."
+          },
+          {
+            "title": "Cybersecurity Enhancement",
+            "description":
+              "Implementing robust security measures to protect your digital assets and ensure compliance with industry standards."
+          },
+          {
+            "title": "Modernizing Legacy Systems",
+            "description":
+              "Upgrading and integrating old systems with cutting-edge technologies to boost efficiency and competitiveness."
+          },
+          {
+            "title": "Automation and AI Integration",
+            "description": "Continuous Support and Training"
+          },
+          {
+            "title": "Continuous Support and Training",
+            "description":
+              "Offering ongoing technical support and training to ensure seamless adoption of new technologies and maximize the return on digital investments."
+          }
+        ]
+      },
+    {
+      "id": "digital_transformation",
+      "name": "Digital Transformation",
+      "descriptions": [
+        "Our unwavering commitment lies in simplifying the migration process, ensuring a seamless transition that aligns with your unique business objectives. Whether you seek enhanced scalability, cost optimization, or seamless collaboration, our team of seasoned experts will meticulously guide you through every step of the cloud migration process, unlocking the full potential of cloud technologies.",
+        "Equipped with in-depth expertise in cloud platforms and industry best practices, we empower your organization to seamlessly integrate cloud services into your digital infrastructure, unlocking a spectrum of transformative benefits.",
+        "Embrace the possibilities with ICS Cloud Migration, where seamless integration meets elevated performance, propelling your digital landscape to new heights of agility and innovation."
+      ],
+      "details": [
+        {
+          "title": "Modernization & Transformation",
+          "description":
+            "Involves updating and enhancing existing systems to leverage contemporary technologies."
+        },
+        {
+          "title": "IT Strategy Development",
+          "description":
+            "Crafting tailored digital strategies to align with your business objectives."
+        },
+        {
+          "title": "Cloud Computing Solutions",
+          "description":
+            "Enhanced scalability, flexibility, and cost-efficiency using cloud infrastructure."
+        },
+        {
+          "title": "Data Analytics and Business Intelligence",
+          "description":
+            "Transforming data into actionable insights to inform decision-making and improve business outcomes."
+        },
+        {
+          "title": "Cybersecurity Enhancement",
+          "description":
+            "Implementing robust security measures to protect your digital assets and ensure compliance with industry standards."
+        },
+        {
+          "title": "Modernizing Legacy Systems",
+          "description":
+            "Upgrading and integrating old systems with cutting-edge technologies to boost efficiency and competitiveness."
+        },
+        {
+          "title": "Automation and AI Integration",
+          "description": "Continuous Support and Training"
+        },
+        {
+          "title": "Continuous Support and Training",
+          "description":
+            "Offering ongoing technical support and training to ensure seamless adoption of new technologies and maximize the return on digital investments."
+        }
+      ]
+    }
+  ]
