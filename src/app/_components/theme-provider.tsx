@@ -17,7 +17,6 @@ export const theme = createTheme({
     warning: { main: "#FCCE2D" },
     info: { main: "#0A0A0B" },
     text: { secondary: "#fff" },
-    divider: "rgba(255, 255, 255, 0.12)",
   },
   typography: {
     fontFamily: '"Montserrat", sans-serif',

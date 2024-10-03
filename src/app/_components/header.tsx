@@ -7,6 +7,7 @@ import {
   Container,
   Drawer,
   IconButton,
+  Link,
   List,
   ListItem,
   ListItemButton,
@@ -18,14 +19,15 @@ import {
 import ArrowOutwardIcon from "@mui/icons-material/ArrowOutward";
 import MenuIcon from "@mui/icons-material/Menu";
 import { useState } from "react";
-import  NextLink from "next/link";
+import NextLink from "next/link";
 import { usePathname } from "next/navigation";
+import CloseIcon from "@mui/icons-material/Close";
 
 export const headerLinks = [
   { label: "Home", href: "/" },
   { label: "About us", href: "/about-us" },
   { label: "Services", href: "/services" },
-  { label: "Contact", href: "/contact" },
+  { label: "Government", href: "/government" },
 ];
 export const Header = () => {
   const pathName = usePathname();
@@ -43,7 +45,7 @@ export const Header = () => {
       }}
     >
       <Box
-        sx={{ bgcolor: "black", position: "absolute", inset: 0, opacity: 0.15 }}
+        sx={{ bgcolor: "black", position: "absolute", inset: 0, opacity: 0.35 }}
         component="header"
       ></Box>
       <AppBar position="static" sx={{ bgcolor: "transparent" }} elevation={0}>
@@ -56,9 +58,15 @@ export const Header = () => {
               py: { xs: 3.5 },
             }}
           >
-            <Typography color="warning" variant="h5" fontWeight={700}>
+            <Link
+              component={NextLink}
+              href="/"
+              color="warning"
+              variant="h5"
+              fontWeight={700}
+            >
               ICS
-            </Typography>
+            </Link>
 
             <Stack alignItems={"center"} gap={3}>
               <Stack gap={2.5} display={{ xs: "none", md: "flex" }}>
@@ -75,14 +83,21 @@ export const Header = () => {
                 ))}
               </Stack>
 
-              <Button variant="outlined" color="secondary" size="large">
+              <Button
+                variant="outlined"
+                color="secondary"
+                size="large"
+                LinkComponent={NextLink}
+                href={"/contacts"}
+                sx={{ display: { xs: "none", md: "initial" } }}
+              >
                 Get in touch
               </Button>
 
               <IconButton
                 color="secondary"
                 sx={{ display: { md: "none" } }}
-                onClick={() => setMenuShown((val) => !val)}
+                onClick={() => setMenuShown((val) => true)}
               >
                 <MenuIcon />
               </IconButton>
@@ -92,11 +107,30 @@ export const Header = () => {
       </AppBar>
 
       <Drawer open={menuShown} onClose={() => setMenuShown(false)} anchor="top">
-        <Box sx={{ width: "auto" }}>
+        <Toolbar
+          sx={{
+            justifyContent: "space-between",
+            borderBottomWidth: 1,
+            borderBottomColor: "divider",
+            borderBottomStyle: "solid",
+          }}
+        >
+          <Typography variant="h5" fontWeight={700}>
+            ICS
+          </Typography>
+          <IconButton onClick={() => setMenuShown(false)}>
+            <CloseIcon />
+          </IconButton>
+        </Toolbar>
+        <Box sx={{ width: "auto", my: 2 }}>
           <List>
-            {headerLinks.map((link) => (
+            {[...headerLinks, { label: "Contact us", href: "/contacts" }].map((link) => (
               <ListItem key={link.label} disablePadding>
-                <ListItemButton LinkComponent={NextLink} href={link.href}>
+                <ListItemButton
+                  LinkComponent={NextLink}
+                  href={link.href}
+                  sx={{ px: 4 }}
+                >
                   <ListItemText>{link.label}</ListItemText>
                 </ListItemButton>
               </ListItem>
@@ -141,6 +175,8 @@ export const Hero = () => {
           variant="text"
           endIcon={<ArrowOutwardIcon />}
           size="large"
+          LinkComponent={NextLink}
+          href={"/services"}
         >
           Explore More
         </Button>
@@ -148,5 +184,3 @@ export const Hero = () => {
     </Container>
   );
 };
-
-

@@ -4,6 +4,7 @@ import {
   Box,
   Container,
   Divider,
+  Link,
   ListItem,
   ListItemButton,
   ListItemIcon,
@@ -21,11 +22,7 @@ import { headerLinks } from "./header";
 import NextLink from "next/link";
 
 function Footer() {
-  const pages = [
-    ...headerLinks,
-    { label: "Terms and Conditions", href: "/terms" },
-    { label: "Privacy Policy", href: "privacy" },
-  ];
+  const pages = [...headerLinks, { label: "Contact us", href: "/contacts" }];
 
   const services = [
     { label: "Software Engineering" },
@@ -62,25 +59,29 @@ function Footer() {
       </Box>
 
       <Container sx={{ my: 16 }}>
-        <Stack
-          alignItems={"center"}
-          sx={{
-            borderBottom: (theme) => `1px solid ${theme.palette.primary.main}`,
-            display: "inline-flex",
-          }}
-          gap={2}
+        <Link
+          component={NextLink}
+          href="/contacts#form"
+          sx={{ fontSize: { xs: "10vw", md: "4.5vw" }, fontWeight: "bold" }}
+          color="primary"
         >
-          <Typography
-            sx={{ fontSize: { xs: "10vw", md: "4.5vw" }, fontWeight: "bold" }}
-            color="primary"
+          <Stack
+            component={"p"}
+            alignItems={"center"}
+            sx={{
+              borderBottom: (theme) =>
+                `1px solid ${theme.palette.primary.main}`,
+              display: "inline-flex",
+            }}
+            gap={2}
           >
-            LET’S TALK!
-          </Typography>
-          <ArrowOutwardIcon
-            color="primary"
-            sx={{ fontSize: { xs: "10vw", md: "4.5vw" } }}
-          />
-        </Stack>
+            <span>LET’S TALK!</span>
+            <ArrowOutwardIcon
+              color="primary"
+              sx={{ fontSize: { xs: "10vw", md: "4.5vw" } }}
+            />
+          </Stack>
+        </Link>
       </Container>
 
       <Box
@@ -105,15 +106,17 @@ function Footer() {
         <Container sx={{ position: "relative" }}>
           <Grid container spacing={1.5}>
             <Grid size={{ xs: 12, md: 12, lg: 5 }}>
-              <Typography
+              <Link
+                component={NextLink}
+                href="/"
                 color="warning"
                 variant="h5"
                 fontWeight={700}
-                gutterBottom
+                sx={{ mb: 3, display: "block" }}
               >
                 ICS
-              </Typography>
-              <Typography color="textSecondary" variant="body2">
+              </Link>
+              <Typography color="textSecondary" variant="body2" mt={3}>
                 ICS thrives on innovation, consistently exploring and adopting
                 emerging technologies to stay ahead of the curve. We believe in
                 driving technological evolution that empowers businesses to
@@ -237,10 +240,40 @@ function Footer() {
             </Grid>
           </Grid>
           <Divider sx={{ mt: 8, borderColor: "rgba(255,255,255,0.6)" }} />
-          <Stack justifyContent="center" py={2}>
+          <Stack
+            justifyContent="space-between"
+            py={2}
+            direction={{ xs: "column", md: "row" }}
+            gap={2}
+            sx={{ alignItems: "center" }}
+          >
             <Typography color="secondary" variant="body2">
               Copyright © 2024 All rights reserved.
             </Typography>
+
+            <Stack spacing={2}>
+              <Link
+                variant="body2"
+                color="secondary"
+                href="#"
+                component={NextLink}
+              >
+                Terms and Conditions
+              </Link>
+              <Divider
+                orientation="vertical"
+                flexItem
+                sx={{ borderColor: "secondary.main" }}
+              />
+              <Link
+                variant="body2"
+                color="secondary"
+                href="#"
+                component={NextLink}
+              >
+                Privacy Policy
+              </Link>
+            </Stack>
           </Stack>
         </Container>
       </Box>

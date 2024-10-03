@@ -19,6 +19,7 @@ import { ServiceCard } from "./_components/service-card";
 import SquareIcon from "@mui/icons-material/Square";
 import { Testimonials } from "./_components/testimonials";
 import services from "../data/service-data.json";
+import NextLink from "next/link"
 
 export default function Home() {
   return (
@@ -175,6 +176,8 @@ export default function Home() {
             endIcon={<ArrowOutwardIcon />}
             sx={{ borderRadius: 1000 }}
             color="info"
+            component={NextLink}
+            href="/services"
           >
             View all services{" "}
           </Button>
@@ -283,7 +286,7 @@ export default function Home() {
               Learn more why our clients trust ICS with there projects
             </Typography>
 
-            <Button variant="contained" size="large">
+            <Button variant="contained" size="large" sx={{textTransform: "Capitalize"}}>
               DOWNLOAD CAPABILITY STATEMENT
             </Button>
           </Stack>
