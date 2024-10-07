@@ -28,7 +28,7 @@ export const NewsLetter = () => {
           </Typography>
         </Grid>
         <Grid size={{xs: 12, sm: 6}} sx={{ display: "grid", alignItems: "center" }}>
-          <Stack alignItems="stretch" gap={2}>
+          <Stack alignItems="center" gap={2}>
             <TextField
               placeholder="Enter your email"
               color="secondary"

@@ -1,11 +1,11 @@
 "use client";
 
 import { createTheme, ThemeProvider } from "@mui/material";
-import { Palette } from '@mui/icons-material';
+import { Palette } from "@mui/icons-material";
 
 // declare module "@mui/material/styles" {
 //   interface PaletteColor {
-//     dark: 
+//     dark:
 //   }
 // };
 
@@ -23,6 +23,13 @@ export const theme = createTheme({
     fontSize: 17,
   },
   components: {
+    MuiButton: {
+      styleOverrides: {
+        contained: {
+          borderRadius: 1000,
+        },
+      },
+    },
     MuiStack: {
       defaultProps: { direction: "row" },
     },
@@ -41,13 +48,13 @@ export const theme = createTheme({
       styleOverrides: {
         root: {
           color: "#fff",
+          "&::hover": {
+            borderColor: "white",
+          },
         },
         notchedOutline: {
           borderColor: "white",
           color: "white",
-          "&::hover": {
-            borderColor: "white",
-          },
         },
       },
     },

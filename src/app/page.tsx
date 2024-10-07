@@ -19,7 +19,7 @@ import { ServiceCard } from "./_components/service-card";
 import SquareIcon from "@mui/icons-material/Square";
 import { Testimonials } from "./_components/testimonials";
 import services from "../data/service-data.json";
-import NextLink from "next/link"
+import NextLink from "next/link";
 
 export default function Home() {
   return (
@@ -257,7 +257,7 @@ export default function Home() {
         </Box>
       </Container>
 
-      <Box sx={{ bgcolor: "#082158", py: 6, my: 16 }}>
+      <Box sx={{ bgcolor: "primary.dark", py: 6, my: 16 }}>
         <Container>
           <Stack direction={"column"} alignItems={"center"}>
             <Typography
@@ -286,7 +286,16 @@ export default function Home() {
               Learn more why our clients trust ICS with there projects
             </Typography>
 
-            <Button variant="contained" size="large" sx={{textTransform: "Capitalize"}}>
+            <Button
+              variant="contained"
+              size="large"
+              sx={{ textTransform: "Capitalize" }}
+              component={"a"}
+              href="/file/Capability_Statement.pdf"
+              color="secondary"
+              disableElevation
+              download
+            >
               DOWNLOAD CAPABILITY STATEMENT
             </Button>
           </Stack>

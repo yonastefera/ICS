@@ -8,7 +8,6 @@ import WatchLaterIcon from "@mui/icons-material/WatchLater";
 import { ContactCard } from "./_components/contact-card";
 import { SendMessage } from "./_components/send-message";
 import { Location } from "./_components/location";
-import { APIProvider } from "@vis.gl/react-google-maps";
 
 const Page = () => {
   return (
