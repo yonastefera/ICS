@@ -16,6 +16,8 @@ import SouthEastIcon from "@mui/icons-material/SouthEast";
 import { ServiceDetailsCard } from "./_components/service-details-card";
 import { useEffect, useState } from "react";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
+import NextLink from "next/link";
+
 import services from "../../data/service-data.json";
 
 export const Page = () => {
@@ -23,14 +25,7 @@ export const Page = () => {
   const pathName = usePathname();
   const router = useRouter();
 
-  const [panel, setPanel] = useState<string>(
-    searchParams.get("panel") || "software_development"
-  );
-
-
-  useEffect(() => {
-    router.push(`${pathName}?panel=${panel}`, { scroll: false });
-  }, [panel]);
+  const currentPanel = searchParams.get("panel") || services[0].id;
 
   return (
     <>
@@ -41,7 +36,10 @@ export const Page = () => {
           backgroundSize: "cover",
           backgroundPosition: "center",
           position: "relative",
-          clipPath: {md: "polygon(0 0, 75% 0%, 85% 100%, 0% 100%)", xs: "polygon(0 0, 87% 0%, 95% 100%, 0% 100%)"},
+          clipPath: {
+            md: "polygon(0 0, 75% 0%, 85% 100%, 0% 100%)",
+            xs: "polygon(0 0, 87% 0%, 95% 100%, 0% 100%)",
+          },
           py: 3,
           mt: 16,
         }}
@@ -71,18 +69,21 @@ export const Page = () => {
           <Accordion
             elevation={0}
             key={service.id}
-            defaultExpanded={index === 0}
-            expanded={panel === service.id}
-            onChange={() => setPanel(service.id)}
-            id={service.id}
+            expanded={currentPanel === service.id}
             sx={{
               borderTop: (theme) => `1px solid ${theme.palette.primary.main}`,
               borderBottom: (theme) =>
                 `1px solid ${theme.palette.primary.main}`,
+              scrollMarginTop: "100px",
               mt: "-1px",
             }}
+            slotProps={{ transition: { timeout: 0 } }}
           >
-            <AccordionSummary>
+            <AccordionSummary
+              id={service.id}
+              component={NextLink}
+              href={`/services?panel=${service.id}#${service.id}`}
+            >
               <Stack
                 direction="column"
                 gap={2}

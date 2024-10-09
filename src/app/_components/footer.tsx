@@ -104,8 +104,8 @@ function Footer() {
           }}
         />
         <Container sx={{ position: "relative" }}>
-          <Grid container spacing={1.5}>
-            <Grid size={{ xs: 12, md: 12, lg: 5 }}>
+          <Grid container spacing={2}>
+            <Grid size={{ xs: 12, md: 12, lg: 4 }}>
               <Link
                 component={NextLink}
                 href="/"
@@ -152,7 +152,7 @@ function Footer() {
               </Stack>
             </Grid>
 
-            <Grid size={{ xs: 12, md: 4, lg: 2 }}>
+            <Grid size={{ xs: 12, md: 4, lg: 3 }}>
               <ListItem>
                 <ListItemText
                   primary={

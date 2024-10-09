@@ -3,8 +3,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Header } from "./_components/header";
 import Footer from "./_components/footer";
-import { AppThemeProvider } from "./_components/theme-provider";
+import { AppThemeProvider } from "./_components/providers/theme-provider";
 import { CssBaseline } from "@mui/material";
+import { SnackBarProvider } from "./_components/providers/snackbar-provider";
 
 export const metadata: Metadata = {
   title: "ICS",
@@ -20,10 +21,12 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <AppThemeProvider>
-          <Header />
-          {children}
-          <Footer />
-          <CssBaseline />
+          <SnackBarProvider>
+            <Header />
+            {children}
+            <Footer />
+            <CssBaseline />
+          </SnackBarProvider>
         </AppThemeProvider>
       </body>
     </html>

@@ -12,6 +12,8 @@ import {
 import ArrowOutwardIcon from "@mui/icons-material/ArrowOutward";
 import Image from "next/image";
 import NextLink from "next/link";
+import { useContext } from "react";
+import { SnackbarContext } from "./providers/snackbar-provider";
 
 export const ServiceCard: React.FC<{
   title: string;
@@ -20,7 +22,7 @@ export const ServiceCard: React.FC<{
   image: string;
   id: string;
 }> = ({ title, description, order, image, id }) => {
-  const theme = useTheme();
+
   return (
     <>
       <Card

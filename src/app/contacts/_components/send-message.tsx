@@ -1,3 +1,6 @@
+"use client";
+
+import { SnackbarContext } from "@/app/_components/providers/snackbar-provider";
 import {
   Button,
   Card,
@@ -7,8 +10,12 @@ import {
   TextField,
   Typography,
 } from "@mui/material";
+import { useContext } from "react";
 
 export const SendMessage = () => {
+
+  const snackbar = useContext(SnackbarContext);
+
   return (
     <Card elevation={0} sx={{ bgcolor: "#082158", borderRadius: 3.5 }}>
       <CardContent sx={{ p: 4 }}>
@@ -22,19 +29,60 @@ export const SendMessage = () => {
         </Typography>
         <Stack direction="column" gap={3} mt={5}>
           <Stack gap={3} direction={{ xs: "column", sm: "row" }}>
-            <TextField label="First name" fullWidth />
-            <TextField label="Last name" fullWidth />
+            <TextField
+              label="First name"
+              fullWidth
+              color="secondary"
+              sx={{
+                input: {
+                  color: "white",
+                },
+              }}
+            />
+            <TextField
+              label="Last name"
+              fullWidth
+              color="secondary"
+              sx={{
+                input: {
+                  color: "white",
+                },
+              }}
+            />
           </Stack>
-          <TextField label="Subject" fullWidth />
-          <TextField label="note" multiline rows={4} fullWidth />
+          <TextField
+            label="Subject"
+            fullWidth
+            color="secondary"
+            sx={{
+              input: {
+                color: "white",
+              },
+            }}
+          />
+          <TextField
+            label="note"
+            multiline
+            rows={8}
+            fullWidth
+            color="secondary"
+            sx={{
+              input: {
+                color: "white",
+              },
+            }}
+          />
         </Stack>
       </CardContent>
       <CardActions sx={{ p: 4 }}>
         <Button
-          variant="outlined"
+          variant="contained"
           color="secondary"
-          sx={{ borderRadius: 1000, textTransform: "Capitalize" }}
+          sx={{ textTransform: "Capitalize" }}
           size="large"
+          onClick={() =>
+            snackbar.setMessage({ message: "Failed to send the message", type: "error" })
+          }
         >
           Get in touch
         </Button>

@@ -22,15 +22,13 @@ const Page = () => {
   return (
     <>
       <Container sx={{ my: 16 }}>
-        <Chip label="WHO WE ARE" variant="outlined" color="primary" />
         <Grid container spacing={4}>
           <Grid size={{ xs: 12, md: 6 }}>
             <Box
               sx={{
                 position: "relative",
-                width: "calc(100% - 58px)",
+                height: "75vh",
                 my: "58px",
-                maxWidth: "566px",
                 mx: "auto",
                 aspectRatio: "10/12",
               }}
@@ -82,6 +80,7 @@ const Page = () => {
               }}
             >
               <Box>
+                <Chip label="WHO WE ARE" variant="outlined" color="primary" />
                 <Typography
                   variant="h3"
                   gutterBottom
@@ -126,9 +125,8 @@ const Page = () => {
             <Box
               sx={{
                 position: "relative",
-                width: "calc(100% - 58px)",
+                height: "75vh",
                 my: "58px",
-                maxWidth: "566px",
                 mx: "auto",
                 aspectRatio: "10/12",
               }}
@@ -209,9 +207,8 @@ const Page = () => {
             <Box
               sx={{
                 position: "relative",
-                width: "calc(100% - 58px)",
+                height: "75vh",
                 my: "58px",
-                maxWidth: "566px",
                 mx: "auto",
                 aspectRatio: "10/12",
               }}

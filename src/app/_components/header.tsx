@@ -15,7 +15,9 @@ import {
   Stack,
   Toolbar,
   Typography,
+  alpha,
   useScrollTrigger,
+  useTheme,
 } from "@mui/material";
 import ArrowOutwardIcon from "@mui/icons-material/ArrowOutward";
 import MenuIcon from "@mui/icons-material/Menu";
@@ -30,49 +32,38 @@ export const headerLinks = [
   { label: "Services", href: "/services" },
   { label: "Government", href: "/government" },
 ];
+
 export const Header = () => {
+  const theme = useTheme();
   const pathName = usePathname();
 
   const [menuShown, setMenuShown] = useState(false);
   const trigger = useScrollTrigger({ disableHysteresis: true });
 
   const isOnLandingPage = pathName === "/";
+  const bgColor = alpha(theme.palette.tertiary.main, 0.95);
 
   return (
-    <Box
-      sx={{
-        bgcolor: "black",
-        backgroundImage: "url(/images/hero-bg.jpeg)",
-        backgroundSize: "cover",
-        backgroundPosition: "center right",
-        position: "relative",
-        pt: "101.4px",
-      }}
-    >
-      <Box
-        sx={{ bgcolor: "black", position: "absolute", inset: 0, opacity: 0.35 }}
-        component="header"
-      ></Box>
-
+    <>
       <Container>
         <AppBar
           position="fixed"
+          elevation={0}
           sx={{
             bgcolor: !isOnLandingPage
-              ? "#082158"
+              ? bgColor
               : !trigger
               ? "transparent"
-              : "#082158",
+              : bgColor,
           }}
-          elevation={0}
         >
-          <Container sx={{ position: "relative" }}>
+          <Container sx={{ position: "relative" }} maxWidth={false}>
             <Toolbar
               sx={{
                 bgcolor: "transparent",
                 justifyContent: "space-between",
                 px: { xs: 0 },
-                py: { xs: 3.5 },
+                py: { xs: 2 },
               }}
             >
               <Link
@@ -105,7 +96,7 @@ export const Header = () => {
 
                 <Button
                   variant="outlined"
-                  color="secondary"
+                  color={pathName != "/contacts" ? "secondary" : "warning"}
                   size="large"
                   LinkComponent={NextLink}
                   href={"/contacts"}
@@ -155,9 +146,18 @@ export const Header = () => {
                       LinkComponent={NextLink}
                       href={link.href}
                       sx={{ px: 4 }}
-                      color="primary"
                     >
-                      <ListItemText>{link.label}</ListItemText>
+                      <ListItemText
+                        primaryTypographyProps={{
+                          color:
+                            link.href == pathName
+                              ? "primary"
+                              : "textPrimary",
+                          fontWeight: link.href == pathName ? 700 : 400,
+                        }}
+                      >
+                        {link.label}
+                      </ListItemText>
                     </ListItemButton>
                   </ListItem>
                 )
@@ -168,49 +168,60 @@ export const Header = () => {
       </Container>
 
       {pathName === "/" && <Hero />}
-    </Box>
+    </>
   );
 };
 
 export const Hero = () => {
   return (
-    <Container sx={{ position: "relative" }}>
-      <Box sx={{ maxWidth: "md", py: 16 }}>
-        <Typography
-          color="secondary"
-          variant="h2"
-          fontWeight={700}
-          lineHeight={1.2}
-        >
-          Driven By{" "}
+    <Box
+      sx={{
+        bgcolor: "black",
+        backgroundImage: "url(/images/hero-bg.jpeg)",
+        backgroundSize: "cover",
+        backgroundPosition: "center right",
+        position: "relative",
+        pt: "96px",
+      }}
+    >
+      <Container sx={{ position: "relative" }}>
+        <Box sx={{ maxWidth: "md", py: 16 }}>
           <Typography
-            color="primary"
-            component={"span"}
+            color="secondary"
             variant="h2"
             fontWeight={700}
             lineHeight={1.2}
           >
-            Quality
-          </Typography>{" "}
-          & Dedicated to Solutions
-        </Typography>
-        <Typography color="secondary" variant="body1" sx={{ mt: 4, mb: 6 }}>
-          Bring to the table win-win survival strategies to ensure proactive
-          domination. At the end of the day, going forward, a new normal
-        </Typography>
-        <Button
-          color="warning"
-          variant="contained"
-          disableElevation
-          endIcon={<ArrowOutwardIcon />}
-          size="large"
-          LinkComponent={NextLink}
-          sx={{ borderRadius: 1000 }}
-          href={"/services"}
-        >
-          Explore More
-        </Button>
-      </Box>
-    </Container>
+            Driven By{" "}
+            <Typography
+              color="primary"
+              component={"span"}
+              variant="h2"
+              fontWeight={700}
+              lineHeight={1.2}
+            >
+              Quality
+            </Typography>{" "}
+            & Dedicated to Solutions
+          </Typography>
+          <Typography color="secondary" variant="body1" sx={{ mt: 4, mb: 6 }}>
+            Bring to the table win-win survival strategies to ensure proactive
+            domination. At the end of the day, going forward, a new normal
+          </Typography>
+          <Button
+            color="warning"
+            variant="contained"
+            disableElevation
+            endIcon={<ArrowOutwardIcon />}
+            size="large"
+            LinkComponent={NextLink}
+            sx={{ borderRadius: 1000 }}
+            href={"/services"}
+          >
+            Explore More
+          </Button>
+        </Box>
+      </Container>
+    </Box>
   );
 };

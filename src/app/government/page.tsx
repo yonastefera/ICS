@@ -3,18 +3,44 @@ import {
   Button,
   Card,
   CardContent,
+  Chip,
   Container,
-  Divider,
   List,
   ListItem,
   ListItemText,
   Stack,
-  SxProps,
   Typography,
 } from "@mui/material";
 import Grid from "@mui/material/Grid2";
 import Image from "next/image";
-import { useState } from "react";
+import { Fragment } from "react";
+import { InfoCard } from "./_components/info-card";
+
+const profile = [
+  {
+    label: "Full Legal Name",
+    description: "Icreativv Consulting and Service",
+  },
+  {
+    label: "Clients Serving",
+    description: "Federal, State, local & Commercials",
+  },
+  { label: "Inception", description: "2017" },
+  { label: "Local  office", description: "Atlanta, GA" },
+];
+
+const codes = [
+  "518210 - Data Processing, Hosting and Related Services",
+  "541511 - Custom Computer Programming Services",
+  "541512 - Computer Systems Design Services",
+  "541515 - IT Services",
+  "541519 - Other Computer Related Services",
+  "541611 - Administrative and Management Consulting Services",
+  "54191 - Market Research and Public Opinion Polling",
+  "541990 - Other Scientific and Technical Consulting Services",
+  "561320 - Temporary Help Services",
+  "111 & 112 - Crop & Animal Production",
+];
 
 const Page = () => {
   return (
@@ -22,194 +48,156 @@ const Page = () => {
       <Container sx={{ my: 16 }}>
         <Grid container spacing={4}>
           <Grid
-            size={{ xs: 12, md: 4 }}
-            sx={{ display: "grid", placeItems: "center" }}
+            size={{ xs: 12, md: 6 }}
+            sx={{
+              display: "grid",
+              alignItems: "center",
+              justifyContent: "start",
+            }}
           >
-            <Box sx={{ width: "calc(100% - 32px)" }}>
-              <Stack gap={3} mb={4} ml={-2}>
-                <ImageGrid sx={{ height: 180 }}>
-                  <Image
-                    src="/images/discussion.jpeg"
-                    layout="fill"
-                    alt="discussion"
-                    style={{ objectFit: "cover" }}
-                  />
-                </ImageGrid>
-                <ImageGrid sx={{ height: 180 }}>
-                  <Image
-                    src="/images/discussion.jpeg"
-                    layout="fill"
-                    alt="discussion"
-                    style={{ objectFit: "cover" }}
-                  />
-                </ImageGrid>
-              </Stack>
-              <Stack gap={3} mr={-2}>
-                <ImageGrid>
-                  <Image
-                    src="/images/discussion.jpeg"
-                    layout="fill"
-                    alt="discussion"
-                    style={{ objectFit: "cover" }}
-                  />
-                </ImageGrid>
-                <ImageGrid>
-                  <Image
-                    src="/images/discussion.jpeg"
-                    layout="fill"
-                    alt="discussion"
-                    style={{ objectFit: "cover" }}
-                  />
-                </ImageGrid>
-              </Stack>
+            <Box>
+              <Chip label="GOVERNMENT" variant="outlined" color="primary" />
+              <Typography
+                variant="h3"
+                gutterBottom
+                fontFamily={'"Barlow Condensed", sans-serif'}
+                fontWeight="bold"
+                color="primary"
+              >
+                Empowering Government Clients
+              </Typography>
+              <Typography>
+                Icreativv Consulting & Service is a distinguished small business
+                enterprise with SBA 8(a) Certification, specializing in Managed
+                Services and Technology Consulting. We are committed to
+                delivering unparalleled value, fostering strong partnerships,
+                and providing best-in-class IT solutions to empower Federal,
+                State, and local clients in achieving their objectives. ICS
+                excels in delivering high-end, innovative software, and
+                engineering solutions tailored to the unique needs of government
+                agencies.
+              </Typography>
+              <Typography sx={{ mt: 3 }}>
+                At ICS, we understand that the dynamic landscape of government
+                requirements demands adaptability and agility. Our team is adept
+                at navigating the intricate procurement processes, ensuring that
+                our clients can benefit from our specialized services
+                seamlessly. Whether engaging in joint ventures or subcontracting
+                opportunities, we prioritize transparency and open communication
+                to foster strong and enduring partnerships.
+              </Typography>
             </Box>
           </Grid>
 
-          <Grid size={{ xs: 12, md: 8 }}>
-            <Typography
-              variant="h3"
-              gutterBottom
-              fontFamily={'"Barlow Condensed", sans-serif'}
-              fontWeight="bold"
+          <Grid
+            size={{ xs: 12, md: 6 }}
+            sx={{ display: "grid", placeItems: "center" }}
+          >
+            <Box
+              sx={{
+                position: "relative",
+                my: "58px",
+                height: '75vh',
+                mx: "auto",
+                aspectRatio: "10/12",
+              }}
             >
-              Empowering Government Clients
-            </Typography>
-            <Typography>
-              Icreativv Consulting & Service is a distinguished small business
-              enterprise with SBA 8(a) Certification, specializing in Managed
-              Services and Technology Consulting. We are committed to delivering
-              unparalleled value, fostering strong partnerships, and providing
-              best-in-class IT solutions to empower Federal, State, and local
-              clients in achieving their objectives. ICS excels in delivering
-              high-end, innovative software, and engineering solutions tailored
-              to the unique needs of government agencies.
-            </Typography>
-            <Typography sx={{ mt: 3 }}>
-              At ICS, we understand that the dynamic landscape of government
-              requirements demands adaptability and agility. Our team is adept
-              at navigating the intricate procurement processes, ensuring that
-              our clients can benefit from our specialized services seamlessly.
-              Whether engaging in joint ventures or subcontracting
-              opportunities, we prioritize transparency and open communication
-              to foster strong and enduring partnerships.
-            </Typography>
+              <Image
+                src="/images/discussion.jpeg"
+                fill
+                alt="discussion"
+                style={{ objectFit: "cover" }}
+              />
+              <Box
+                sx={{
+                  width: 150,
+                  height: 150,
+                  position: "absolute",
+                  top: -29,
+                  right: -29,
+                  borderStyle: "solid",
+                  borderWidth: 0,
+                  borderTopWidth: 5,
+                  borderRightWidth: 5,
+                  borderColor: "black",
+                }}
+              />
+              <Box
+                sx={{
+                  width: 150,
+                  height: 150,
+                  position: "absolute",
+                  bottom: -29,
+                  left: -29,
+                  borderStyle: "solid",
+                  borderWidth: 0,
+                  borderBottomWidth: 5,
+                  borderLeftWidth: 5,
+                  borderColor: "black",
+                }}
+              />
+            </Box>
           </Grid>
         </Grid>
       </Container>
 
       <Container sx={{ my: 16, position: "relative" }}>
-        <Box
+        <Card
           sx={{
-            position: "absolute",
-            inset: 0,
-            bgcolor: "black",
-            width: "70%",
-            borderRadius: 6,
-            overflow: "hidden",
+            p: 2,
+            position: "relative",
+            minWidth: "fit-content",
+            width: { xs: "100%", md: "60%" },
+            mx: "auto",
+            borderRadius: 3,
+            boxShadow: '0px 4px 16px 0px #0821582B'
+
           }}
         >
-          <Image
-            src="/images/discussion.jpeg"
-            layout="fill"
-            alt="hero"
-            style={{ objectFit: "cover" }}
-          />
-        </Box>
-        <Box sx={{ position: "relative", py: 8 }}>
-          <Card
-            variant="outlined"
-            sx={{
-              p: 2,
-              position: "relative",
-              minWidth: "fit-content",
-              width: "60%",
-              ml: "auto",
-              borderRadius: 6,
-            }}
-          >
-            <CardContent>
-              <Typography
-                variant="h5"
-                gutterBottom
-                fontFamily={'"Barlow Condensed", sans-serif'}
-                fontWeight="bold"
-              >
-                Empowering Government Clients
-              </Typography>
+          <CardContent>
+            <Typography
+              variant="h5"
+              gutterBottom
+              fontFamily={'"Barlow Condensed", sans-serif'}
+              fontWeight="bold"
+              color="primary"
+            >
+              Company Profile
+            </Typography>
 
-              <List>
-                <ListItem>
-                  <ListItemText
-                    primary={"Full Legal Name"}
-                    secondary={
-                      <Typography
-                        variant="body2"
-                        component={"span"}
-                        color="textPrimary"
-                      >
-                        Icreativv Consulting and Service
-                      </Typography>
-                    }
-                  ></ListItemText>
-                </ListItem>
-
-                <Divider />
-
-                <ListItem>
-                  <ListItemText
-                    primary={"Clients Serving"}
-                    secondary={
-                      <Typography
-                        variant="body2"
-                        component={"span"}
-                        color="textPrimary"
-                      >
-                        Federal, State, local & Commercials
-                      </Typography>
-                    }
-                  ></ListItemText>
-                </ListItem>
-
-                <Divider />
-
-                <ListItem>
-                  <ListItemText
-                    primary={"Inception"}
-                    secondary={
-                      <Typography
-                        variant="body2"
-                        component={"span"}
-                        color="textPrimary"
-                      >
-                        2017
-                      </Typography>
-                    }
-                  ></ListItemText>
-                </ListItem>
-
-                <Divider />
-
-                <ListItem>
-                  <ListItemText
-                    primary={" Local Office"}
-                    secondary={
-                      <Typography
-                        variant="body2"
-                        component={"span"}
-                        color="textPrimary"
-                      >
-                        Atlanta, GA
-                      </Typography>
-                    }
-                  ></ListItemText>
-                </ListItem>
-              </List>
-            </CardContent>
-          </Card>
-        </Box>
+            <List>
+              {profile.map((item, index) => (
+                <Fragment key={`company-profile-${index}`}>
+                  <ListItem sx={{ py: 2, px: 0 }}>
+                    <ListItemText
+                      sx={{
+                        display: { xs: "block", md: "grid" },
+                        gap: 2,
+                        alignItems: "center",
+                        gridTemplateColumns: "repeat(2, 1fr)",
+                      }}
+                      primaryTypographyProps={{
+                        sx: { fontWeight: 500 },
+                        component: "div",
+                      }}
+                      secondaryTypographyProps={{
+                        sx: { textAlign: "start" },
+                        variant: "body2",
+                        component: "div",
+                        color: "textPrimary",
+                      }}
+                      primary={item.label}
+                      secondary={item.description}
+                    ></ListItemText>
+                  </ListItem>
+                </Fragment>
+              ))}
+            </List>
+          </CardContent>
+        </Card>
       </Container>
 
-      <Box sx={{ bgcolor: "#082158", my: 16, py: 5, position: "relative" }}>
+      <Box sx={{ bgcolor: "tertiary.main", my: 16, py: 8 }}>
         <Container>
           <Typography
             variant="h3"
@@ -218,32 +206,63 @@ const Page = () => {
             fontWeight="bold"
             color="textSecondary"
           >
-            Download Our Capability Statement
+            Government Information
           </Typography>
 
-          <Typography color="textSecondary">
-            As a forward-thinking IT solutions provider, our company stands at
-            the forefront of innovation, offering a robust capability statement
-            tailored for government contracts. With a proven track record of
-            delivering cutting-edge technology solutions, we specialize in
-            addressing the unique challenges faced by government agencies
-          </Typography>
-
-          <Typography sx={{ my: 3 }} color="textSecondary">
-            As a forward-thinking IT solutions provider, our company stands at
-            the forefront of innovation, offering a robust capability statement
-            tailored for government contracts. With a proven track record of
-            delivering cutting-edge technology solutions, we specialize in
-            addressing the unique challenges faced by government agencies
-          </Typography>
-
-          <Button
-            color="warning"
-            variant="contained"
-            sx={{ borderRadius: 1000, textTransform: "capitalize" }}
+          <List
+            sx={{
+              display: "grid",
+              gridTemplateColumns: { xs: "1fr", md: "repeat(2, 1fr)" },
+              gap: 2,
+            }}
           >
-            Capability Statement
-          </Button>
+            {codes.map((code, index) => (
+              <ListItem key={`code-${index}`} sx={{ py: 0.5, px: 0 }}>
+                <ListItemText
+                  primary={code}
+                  primaryTypographyProps={{ color: "secondary" }}
+                />
+              </ListItem>
+            ))}
+          </List>
+        </Container>
+      </Box>
+
+      <Box sx={{ my: 16, py: 5, position: "relative" }}>
+        <Container maxWidth="md">
+          <Stack direction="column" alignItems={"center"}>
+            <Typography
+              variant="h3"
+              gutterBottom
+              fontFamily={'"Barlow Condensed", sans-serif'}
+              fontWeight="bold"
+              textAlign={"center"}
+            >
+              Elevate your Projects with ICS
+            </Typography>
+
+            <Typography textAlign={"center"}>
+              As a forward-thinking IT solutions provider, our company stands at
+              the forefront of innovation, offering a robust capability
+              statement tailored for you
+            </Typography>
+
+            <Typography sx={{ my: 3 }} textAlign={"center"}>
+              Learn more why our clients trust ICS with there projects
+            </Typography>
+
+            <Button
+              color="primary"
+              variant="contained"
+              size="large"
+              sx={{ borderRadius: 1000, textTransform: "capitalize" }}
+              component={"a"}
+              href="/file/Capability_Statement.pdf"
+              download
+            >
+              Capability Statement
+            </Button>
+          </Stack>
         </Container>
       </Box>
 
@@ -298,52 +317,6 @@ const Page = () => {
         </Grid>
       </Container>
     </>
-  );
-};
-
-const ImageGrid = ({
-  children,
-  sx,
-}: {
-  children: React.ReactNode;
-  sx?: SxProps;
-}) => {
-  return (
-    <Box
-      flexGrow={1}
-      sx={{
-        position: "relative",
-        height: 135,
-        borderRadius: 2,
-        overflow: "hidden",
-        ...sx,
-      }}
-    >
-      {children}
-    </Box>
-  );
-};
-
-const InfoCard = ({
-  primary,
-  secondary,
-}: {
-  primary: string;
-  secondary: string;
-}) => {
-  const [hovered, setHovered] = useState(false);
-  return (
-    <Card
-      elevation={0}
-      sx={{ bgcolor: "#082158", height: "100%", borderRadius: 3, p: 1.5 }}
-    >
-      <CardContent>
-        <Typography gutterBottom sx={{ fontWeight: 700 }}>
-          {primary}
-        </Typography>
-        <Typography variant="body2">{secondary}</Typography>
-      </CardContent>
-    </Card>
   );
 };
 

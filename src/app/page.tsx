@@ -30,9 +30,8 @@ export default function Home() {
             <Box
               sx={{
                 position: "relative",
-                width: "calc(100% - 58px)",
+                height: '75vh',
                 my: "58px",
-                maxWidth: "566px",
                 mx: "auto",
                 aspectRatio: "10/12",
               }}
@@ -185,7 +184,7 @@ export default function Home() {
 
         <Grid container spacing={2} mt={6}>
           {services.slice(0, 3).map((service, index) => (
-            <Grid size={{ xs: 12, md: 4 }}>
+            <Grid size={{ xs: 12, md: 4 }} key={`service-card-${index}`}>
               <ServiceCard
                 title={service.name}
                 description={service.descriptions[0]}
@@ -216,7 +215,7 @@ export default function Home() {
             for both commercial and government clients.
           </Typography>
 
-          <Typography mt={3}>
+          <Typography my={3}>
             Our comprehensive capabilities span the entire IT spectrum,
             including software development, data analytics, cybersecurity, and
             digital transformation. Our team of highly skilled professionals is
@@ -224,8 +223,14 @@ export default function Home() {
             efficiency, security, and service delivery.
           </Typography>
 
-          <Stack mt={6} direction={{ xs: "column", sm: "row" }}>
-            <List>
+          <Stack direction={{ xs: "column", sm: "row" }}>
+            <List
+              sx={{
+                display: "grid",
+                gridTemplateColumns: { xs: "1fr", md: "repeat(2, 1fr)" },
+                gap: 1,
+              }}
+            >
               <ListItem>
                 <ListItemIcon>
                   <SquareIcon color="primary" fontSize="small" />
@@ -238,8 +243,7 @@ export default function Home() {
                 </ListItemIcon>
                 <ListItemText>Understanding our customer’s needs</ListItemText>
               </ListItem>
-            </List>
-            <List>
+
               <ListItem>
                 <ListItemIcon>
                   <SquareIcon color="primary" fontSize="small" />

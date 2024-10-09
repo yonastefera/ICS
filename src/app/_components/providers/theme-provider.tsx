@@ -1,29 +1,39 @@
 "use client";
 
-import { createTheme, ThemeProvider } from "@mui/material";
-import { Palette } from "@mui/icons-material";
+import {
+  createTheme,
+  outlinedInputClasses,
+  ThemeProvider,
+} from "@mui/material";
 
-// declare module "@mui/material/styles" {
-//   interface PaletteColor {
-//     dark:
-//   }
-// };
+declare module "@mui/material/styles" {
+  interface Palette {
+    tertiary: Palette["primary"];
+  }
+
+  interface PaletteOptions {
+    tertiary: PaletteOptions["primary"];
+  }
+}
 
 export const theme = createTheme({
   palette: {
     primary: { main: "#2563EB" },
-    // dark: { main: "#082158" },
     secondary: { main: "#FAFAFA" },
+    tertiary: { main: "#082158" },
     warning: { main: "#FCCE2D" },
     info: { main: "#0A0A0B" },
     text: { secondary: "#fff" },
   },
   typography: {
     fontFamily: '"Montserrat", sans-serif',
-    fontSize: 17,
+    fontSize: 14,
   },
   components: {
     MuiButton: {
+      defaultProps: {
+        disableElevation: true,
+      },
       styleOverrides: {
         contained: {
           borderRadius: 1000,
@@ -37,7 +47,7 @@ export const theme = createTheme({
       defaultProps: { underline: "none" },
     },
     MuiContainer: {
-      defaultProps: { maxWidth: "xl" },
+      defaultProps: { maxWidth: "lg" },
     },
     MuiChip: {
       styleOverrides: {
@@ -46,15 +56,14 @@ export const theme = createTheme({
     },
     MuiOutlinedInput: {
       styleOverrides: {
-        root: {
-          color: "#fff",
-          "&::hover": {
-            borderColor: "white",
-          },
-        },
         notchedOutline: {
           borderColor: "white",
           color: "white",
+        },
+        root: {
+          [`&:hover .${outlinedInputClasses.notchedOutline}`]: {
+            borderColor: "white",
+          },
         },
       },
     },
