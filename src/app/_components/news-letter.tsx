@@ -38,7 +38,7 @@ export const NewsLetter = () => {
         });
 
         if (res.ok) {
-          snackbar.setMessage({
+          snackbar?.setMessage({
             message: "Thank You for Subscribing!",
             type: "success",
           });
@@ -48,7 +48,7 @@ export const NewsLetter = () => {
 
         throw new Error();
       } catch {
-        snackbar.setMessage({
+        snackbar?.setMessage({
           message: "Something went wrong. Please try again.",
           type: "error",
         });

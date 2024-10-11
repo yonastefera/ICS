@@ -3,14 +3,12 @@
 import { Alert, Slide, SlideProps, Snackbar } from "@mui/material";
 import { ReactNode, createContext, useState } from "react";
 
-export const SnackbarContext = createContext({
-  content: undefined as
-    | { message: string; type: "success" | "error" }
-    | undefined,
+export const SnackbarContext = createContext<{
+  content: { message: string; type: "success" | "error" } | undefined;
   setMessage: (
     content: { message: string; type: "success" | "error" } | undefined
-  ) => {},
-});
+  ) => void;
+} | null>(null);
 
 export const SnackBarProvider = ({ children }: { children: ReactNode }) => {
   const [content, setContent] = useState<

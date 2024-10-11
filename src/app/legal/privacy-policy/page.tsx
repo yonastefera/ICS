@@ -4,8 +4,7 @@ import {
   ListItem,
   ListItemIcon,
   ListItemText,
-  Typography,
-  styled,
+  Typography
 } from "@mui/material";
 import SquareRoundedIcon from "@mui/icons-material/SquareRounded";
 import { ReactNode } from "react";
@@ -15,8 +14,8 @@ const Page = () => {
     <>
       <Container sx={{ my: 16 }}>
         <Typography>
-          Thank you for choosing Icreativv Consulting and Service ("Icreativv,"
-          "we," "us," or "our"). This Privacy Statement outlines our practices
+          Thank you for choosing Icreativv Consulting and Service (&quot;Icreativv,&quot;
+          &quot;we,&quot; &quot;us,&quot; or &quot;our&quot;). This Privacy Statement outlines our practices
           regarding the collection, use, and protection of your personal
           information when you use our services.
         </Typography>

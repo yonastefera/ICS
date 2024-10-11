@@ -1,6 +1,8 @@
 import { NextRequest } from "next/server";
-import { client } from "../subscribe/route";
 import { redirect } from "next/navigation";
+import { MongoClient } from "mongodb";
+
+const client = new MongoClient(process.env.MONGODB!);
 
 export const GET = async (request: NextRequest) => {
   const unsubscribeToken = request.nextUrl.searchParams.get("key");

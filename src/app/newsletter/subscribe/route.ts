@@ -1,7 +1,7 @@
 import { MongoClient } from "mongodb";
 import { transporter } from "../../api/email";
 
-export const client = new MongoClient(process.env.MONGODB!);
+const client = new MongoClient(process.env.MONGODB!);
 
 const emailTemplate = (subscriptionKey: string) =>  `
 <!DOCTYPE html>

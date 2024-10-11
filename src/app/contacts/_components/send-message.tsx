@@ -45,7 +45,7 @@ export const SendMessage = () => {
           body: JSON.stringify(value),
         });
         if (response.ok) {
-          snackbar.setMessage({
+          snackbar?.setMessage({
             message: "Thanks you for sending us a message!",
             type: "success",
           });
@@ -53,11 +53,11 @@ export const SendMessage = () => {
           resetForm();
           return;
         }
-        snackbar.setMessage({
+        snackbar?.setMessage({
           message: "Unable to send the message!",
           type: "error",
         });
-      } catch (error) {}
+      } catch {}
     },
   });
 

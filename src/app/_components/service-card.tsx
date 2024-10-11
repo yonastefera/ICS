@@ -4,16 +4,12 @@ import {
   Card,
   CardContent,
   Typography,
-  Button,
-  useTheme,
-  Stack,
-  Box,
+  Button, Stack,
+  Box
 } from "@mui/material";
 import ArrowOutwardIcon from "@mui/icons-material/ArrowOutward";
 import Image from "next/image";
 import NextLink from "next/link";
-import { useContext } from "react";
-import { SnackbarContext } from "./providers/snackbar-provider";
 
 export const ServiceCard: React.FC<{
   title: string;
@@ -21,7 +17,7 @@ export const ServiceCard: React.FC<{
   order: string;
   image: string;
   id: string;
-}> = ({ title, description, order, image, id }) => {
+}> = ({ title, description, image, id }) => {
 
   return (
     <>

@@ -26,7 +26,7 @@ import NextLink from "next/link";
 import { usePathname } from "next/navigation";
 import CloseIcon from "@mui/icons-material/Close";
 import { motion } from "framer-motion";
-import { container, opacity, slideUp } from "@/animation";
+import { container, opacity } from "@/animation";
 
 export const headerLinks = [
   { label: "Home", href: "/" },
@@ -110,7 +110,7 @@ export const Header = () => {
                 <IconButton
                   color="secondary"
                   sx={{ display: { md: "none" } }}
-                  onClick={() => setMenuShown((val) => true)}
+                  onClick={() => setMenuShown(() => true)}
                 >
                   <MenuIcon />
                 </IconButton>

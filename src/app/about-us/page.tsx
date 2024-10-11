@@ -94,7 +94,7 @@ const Page = () => {
                   <Typography variant="body1">
                     Established in 2017, Icreativv Consulting and Service (ICS)
                     is a leading technology solutions provider based in Atlanta,
-                    Georgia. Committed to prioritizing our clients' needs, we
+                    Georgia. Committed to prioritizing our clients&apos; needs, we
                     deliver exceptional solutions and services at competitive
                     prices.
                   </Typography>
@@ -341,7 +341,7 @@ const Page = () => {
 
         <Grid container spacing={2}>
           {users.map((user, index) => (
-            <Grid size={{ xs: 12, sm: 6, md: 4, lg: 3 }}>
+            <Grid size={{ xs: 12, sm: 6, md: 4, lg: 3 }} key={`team-member-${index}`}>
               <Card elevation={0}>
                 <CardMedia sx={{ height: 420, position: "relative" }}>
                   <Image

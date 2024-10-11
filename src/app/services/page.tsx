@@ -1,5 +1,6 @@
 "use client";
 
+import React from "react";
 import {
   Chip,
   Typography,
@@ -14,17 +15,13 @@ import {
 import Grid from "@mui/material/Grid2";
 import SouthEastIcon from "@mui/icons-material/SouthEast";
 import { ServiceDetailsCard } from "./_components/service-details-card";
-import { useEffect, useState } from "react";
-import { usePathname, useRouter, useSearchParams } from "next/navigation";
+import { useSearchParams } from "next/navigation";
 import NextLink from "next/link";
 
 import services from "../../data/service-data.json";
 
-export const Page = () => {
+const Page: React.FC = () => {
   const searchParams = useSearchParams();
-  const pathName = usePathname();
-  const router = useRouter();
-
   const currentPanel = searchParams.get("panel") || services[0].id;
 
   return (

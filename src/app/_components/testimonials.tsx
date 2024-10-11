@@ -1,6 +1,6 @@
 import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
 import "swiper/css";
-import { Box, IconButton, Stack, Typography } from "@mui/material";
+import { IconButton, Stack, Typography } from "@mui/material";
 import FormatQuoteIcon from "@mui/icons-material/FormatQuote";
 
 import Grid from "@mui/material/Grid2";
