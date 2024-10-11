@@ -19,21 +19,14 @@ import FmdGoodIcon from "@mui/icons-material/FmdGood";
 import { NewsLetter } from "./news-letter";
 import ArrowOutwardIcon from "@mui/icons-material/ArrowOutward";
 import { headerLinks } from "./header";
+import services from "@/data/service-data.json";
 import NextLink from "next/link";
 
 function Footer() {
-  const pages = [...headerLinks, { label: "Contact us", href: "/contacts" }];
-
-  const services = [
-    { label: "Software Engineering" },
-    { label: "Enterprise IT Solutions" },
-    { label: "Cyber Security" },
-    { label: "Cloud Migration" },
-    { label: "Data Transformation" },
-  ];
+  const pages = [...headerLinks, { label: "Contact Us", href: "/contacts" }];
 
   return (
-    <>
+    <footer>
       <Box
         sx={{
           bgcolor: "black",
@@ -165,12 +158,16 @@ function Footer() {
 
               <Stack direction="column">
                 {services.map((link) => (
-                  <ListItem disablePadding key={link.label}>
-                    <ListItemButton aria-label="Navigate to Home">
+                  <ListItem disablePadding key={link.id}>
+                    <ListItemButton
+                      aria-label="Navigate to Home"
+                      LinkComponent={NextLink}
+                      href={`/services?panel=${link.id}#${link.id}`}
+                    >
                       <ListItemText
                         primary={
                           <Typography color="textSecondary" variant="body2">
-                            {link.label}
+                            {link.name}
                           </Typography>
                         }
                       />
@@ -185,7 +182,7 @@ function Footer() {
                 <ListItemText
                   primary={
                     <Typography color="textSecondary" variant="h6">
-                      Contact us
+                      Contact Us
                     </Typography>
                   }
                 />
@@ -193,7 +190,10 @@ function Footer() {
 
               <Stack direction="column">
                 <ListItem disablePadding>
-                  <ListItemButton>
+                  <ListItemButton
+                    LinkComponent={"a"}
+                    href={"mailto:mail@icreativv.com"}
+                  >
                     <ListItemIcon>
                       <MarkunreadIcon color="secondary" fontSize="small" />
                     </ListItemIcon>
@@ -208,7 +208,7 @@ function Footer() {
                 </ListItem>
 
                 <ListItem disablePadding>
-                  <ListItemButton>
+                  <ListItemButton LinkComponent={"a"} href="tel:+18182809198">
                     <ListItemIcon>
                       <PhoneIcon color="secondary" fontSize="small" />
                     </ListItemIcon>
@@ -230,7 +230,7 @@ function Footer() {
                     <ListItemText
                       primary={
                         <Typography color="textSecondary" variant="body2">
-                          1165 springwood connector, Atlanta GS 30328 USA
+                          1165 Springwood Connector, Atlanta GA 30328 USA
                         </Typography>
                       }
                     />
@@ -277,7 +277,7 @@ function Footer() {
           </Stack>
         </Container>
       </Box>
-    </>
+    </footer>
   );
 }
 

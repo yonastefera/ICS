@@ -88,7 +88,7 @@ const Page = () => {
                   fontWeight="bold"
                   color="primary"
                 >
-                  About us
+                  About Us
                 </Typography>
                 <Stack direction="column" gap={3}>
                   <Typography variant="body1">
@@ -121,7 +121,7 @@ const Page = () => {
 
       <Container sx={{ my: 16 }}>
         <Grid container spacing={4}>
-          <Grid size={{ xs: 12, md: 6 }} order={2}>
+          <Grid size={{ xs: 12, md: 6 }} order={{ xs: 1, md: 2 }}>
             <Box
               sx={{
                 position: "relative",
@@ -168,7 +168,7 @@ const Page = () => {
             </Box>
           </Grid>
 
-          <Grid size={{ xs: 12, md: 6 }} order={1}>
+          <Grid size={{ xs: 12, md: 6 }} order={{ xs: 2, md: 1 }}>
             <Box
               sx={{
                 wdith: "100%",

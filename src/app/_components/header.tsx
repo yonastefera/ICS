@@ -25,10 +25,12 @@ import { useState } from "react";
 import NextLink from "next/link";
 import { usePathname } from "next/navigation";
 import CloseIcon from "@mui/icons-material/Close";
+import { motion } from "framer-motion";
+import { container, opacity, slideUp } from "@/animation";
 
 export const headerLinks = [
   { label: "Home", href: "/" },
-  { label: "About us", href: "/about-us" },
+  { label: "About Us", href: "/about-us" },
   { label: "Services", href: "/services" },
   { label: "Government", href: "/government" },
 ];
@@ -139,7 +141,7 @@ export const Header = () => {
           </Toolbar>
           <Box sx={{ width: "auto", my: 2 }}>
             <List>
-              {[...headerLinks, { label: "Contact us", href: "/contacts" }].map(
+              {[...headerLinks, { label: "Contact Us", href: "/contacts" }].map(
                 (link) => (
                   <ListItem key={link.label} disablePadding>
                     <ListItemButton
@@ -150,9 +152,7 @@ export const Header = () => {
                       <ListItemText
                         primaryTypographyProps={{
                           color:
-                            link.href == pathName
-                              ? "primary"
-                              : "textPrimary",
+                            link.href == pathName ? "primary" : "textPrimary",
                           fontWeight: link.href == pathName ? 700 : 400,
                         }}
                       >
@@ -180,47 +180,60 @@ export const Hero = () => {
         backgroundImage: "url(/images/hero-bg.jpeg)",
         backgroundSize: "cover",
         backgroundPosition: "center right",
-        position: "relative",
         pt: "96px",
+        height: '100vh'
       }}
     >
       <Container sx={{ position: "relative" }}>
-        <Box sx={{ maxWidth: "md", py: 16 }}>
-          <Typography
-            color="secondary"
-            variant="h2"
-            fontWeight={700}
-            lineHeight={1.2}
-          >
-            Driven By{" "}
-            <Typography
-              color="primary"
-              component={"span"}
-              variant="h2"
-              fontWeight={700}
-              lineHeight={1.2}
-            >
-              Quality
-            </Typography>{" "}
-            & Dedicated to Solutions
-          </Typography>
-          <Typography color="secondary" variant="body1" sx={{ mt: 4, mb: 6 }}>
-            Bring to the table win-win survival strategies to ensure proactive
-            domination. At the end of the day, going forward, a new normal
-          </Typography>
-          <Button
-            color="warning"
-            variant="contained"
-            disableElevation
-            endIcon={<ArrowOutwardIcon />}
-            size="large"
-            LinkComponent={NextLink}
-            sx={{ borderRadius: 1000 }}
-            href={"/services"}
-          >
-            Explore More
-          </Button>
-        </Box>
+        <motion.div variants={container} initial="hidden" whileInView="shown">
+          <Box sx={{ maxWidth: "md", py: 16 }}>
+            <motion.div variants={opacity}>
+              <Typography
+                color="secondary"
+                variant="h2"
+                fontWeight={700}
+                lineHeight={1.2}
+              >
+                Driven By{" "}
+                <Typography
+                  color="primary"
+                  component={"span"}
+                  variant="h2"
+                  fontWeight={700}
+                  lineHeight={1.2}
+                >
+                  Quality
+                </Typography>{" "}
+                & Dedicated to Solutions
+              </Typography>
+            </motion.div>
+            <motion.div variants={opacity}>
+              <Typography
+                color="secondary"
+                variant="body1"
+                sx={{ mt: 4, mb: 6 }}
+              >
+                Bring to the table win-win survival strategies to ensure
+                proactive domination. At the end of the day, going forward, a
+                new normal
+              </Typography>
+            </motion.div>
+            <motion.div variants={opacity}>
+              <Button
+                color="warning"
+                variant="contained"
+                disableElevation
+                endIcon={<ArrowOutwardIcon />}
+                size="large"
+                LinkComponent={NextLink}
+                sx={{ borderRadius: 1000 }}
+                href={"/services"}
+              >
+                Explore More
+              </Button>
+            </motion.div>
+          </Box>
+        </motion.div>
       </Container>
     </Box>
   );

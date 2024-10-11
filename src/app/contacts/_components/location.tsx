@@ -19,7 +19,7 @@ export const Location = () => {
         >
           <Map
             defaultZoom={13}
-            defaultCenter={{ lat: -33.860664, lng: 151.208138 }}
+            defaultCenter={{ lat: 33.917150, lng: -84.347960 }}
           ></Map>
 
           {/* <Image src="/images/map.png" fill alt="ICS location" /> */}

@@ -102,7 +102,7 @@
       ]
     },
     {
-      "id": "cloud_migration",
+      "id": "cloud",
       "name": "Cloud Migration",
       "icon":"/images/service-icons/cloud-migration.png",
       "descriptions": [
@@ -201,7 +201,7 @@
               "Offering ongoing technical support and training to ensure seamless adoption of new technologies and maximize the return on digital investments."
           }
         ]
-      },
+    },
     {
       "id": "digital_transformation",
       "name": "Digital Transformation",
@@ -249,6 +249,56 @@
           "title": "Continuous Support and Training",
           "description":
             "Offering ongoing technical support and training to ensure seamless adoption of new technologies and maximize the return on digital investments."
+        }
+      ]
+    },
+    {
+      "id": "artificial_intelligence",
+      "name": "Artificial Intelligence (AI)",
+      "descriptions": [
+        "Unlock the future with our cutting-edge Artificial Intelligence solutions. Harness the power of advanced algorithms and machine learning to drive innovation, enhance efficiency, and transform your business operations.",
+        "Our AI technology empowers organizations to make data-driven decisions, automate routine tasks, and uncover valuable insights.",
+        "Whether you’re looking to optimize customer experiences, streamline processes, or innovate your product offerings, our tailored AI solutions are designed to meet your unique needs and propel your business forward."
+      ],
+      "details": [
+        {
+          "title": "Responsible AI",
+          "description":
+          "Embrace the power of AI with a commitment to responsibility and ethics. Ensure your AI initiatives align with ethical standards and drive positive impact while mitigating risks."
+        },
+        {
+          "title": "Generative AI",
+          "description":
+            "Unlock the potential of generative AI by choosing the right large language model for your specific needs. Elevate your projects with customized generative AI solutions."
+        },
+        {
+          "title": "Secure AI",
+          "description":
+            "Our approach protects against adversarial attacks, ensuring your AI initiatives remain robust and trustworthy."
+        },
+        {
+          "title": "Vision AI",
+          "description":
+            "Streamline the development and maintenance of mission-specific, multi-modal computer vision systems that function securely in the cloud or at the edge."
+        },
+        {
+          "title": "AI for Cybersecurity",
+          "description":
+            "Stay ahead of threats with advanced AI and machine learning solutions for automated threat detection and response."
+        },
+        {
+          "title": "Quantum Technologies",
+          "description":
+            "Transform the immense potential of quantum technology into mission-driven solutions for research and development, compound prototyping, and optimization."
+        },
+        {
+          "title": "Automation",
+          "description": "Streamline your operations with intelligent automation solutions that enhance efficiency and reduce manual effort."
+        },
+        {
+          "title": "Robotics",
+          "description":
+            "Revolutionize your processes with advanced robotics designed for precision and reliability."
         }
       ]
     }

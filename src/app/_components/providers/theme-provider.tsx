@@ -5,6 +5,7 @@ import {
   outlinedInputClasses,
   ThemeProvider,
 } from "@mui/material";
+import { red } from "@mui/material/colors";
 
 declare module "@mui/material/styles" {
   interface Palette {
@@ -24,6 +25,7 @@ export const theme = createTheme({
     warning: { main: "#FCCE2D" },
     info: { main: "#0A0A0B" },
     text: { secondary: "#fff" },
+    error: { main: red[200] },
   },
   typography: {
     fontFamily: '"Montserrat", sans-serif',
