@@ -49,6 +49,7 @@ export default function Home() {
                   position: "relative",
                   height: "75vh",
                   marginTop: "58px",
+                  marginBottom: "58px",
                   marginLeft: "auto",
                   marginRight: "auto",
                   aspectRatio: "10/12",

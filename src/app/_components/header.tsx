@@ -186,7 +186,7 @@ export const Hero = () => {
         overflow: 'hidden'
       }}
     >
-      <video
+      {/* <video
         autoPlay
         muted
         loop
@@ -200,7 +200,7 @@ export const Hero = () => {
         }}
       >
         <source src="/bg.mp4" type="video/mp4" />
-      </video>
+      </video> */}
       <Box sx={{bgcolor: 'rgba(0,0,0,0.35)', position: 'absolute', inset: 0}}/>
       <Container sx={{ position: "relative" }}>
         <motion.div variants={container} initial="hidden" whileInView="shown">
