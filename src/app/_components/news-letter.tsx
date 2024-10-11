@@ -32,7 +32,7 @@ export const NewsLetter = () => {
     validationSchema: emailSchema,
     onSubmit: async (value, { resetForm }) => {
       try {
-        const res = await fetch("/api/newsletter", {
+        const res = await fetch("/newsletter/subscribe", {
           method: "POST",
           body: JSON.stringify(value),
         });

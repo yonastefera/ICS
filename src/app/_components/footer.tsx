@@ -255,7 +255,7 @@ function Footer() {
               <Link
                 variant="body2"
                 color="secondary"
-                href="#"
+                href="/legal/privacy-policy"
                 component={NextLink}
               >
                 Terms and Conditions
@@ -268,7 +268,7 @@ function Footer() {
               <Link
                 variant="body2"
                 color="secondary"
-                href="#"
+                href="/legal/privacy-policy"
                 component={NextLink}
               >
                 Privacy Policy

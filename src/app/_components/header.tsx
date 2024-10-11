@@ -181,12 +181,30 @@ export const Hero = () => {
         backgroundSize: "cover",
         backgroundPosition: "center right",
         pt: "96px",
-        height: '100vh'
+        minHeight: "100vh",
+        position: "relative",
+        overflow: 'hidden'
       }}
     >
+      <video
+        autoPlay
+        muted
+        loop
+        style={{
+          top: 0,
+          left: 0,
+          height: "100%",
+          width: "100vw",
+          position: "absolute",
+          objectFit: "cover",
+        }}
+      >
+        <source src="/bg.mp4" type="video/mp4" />
+      </video>
+      <Box sx={{bgcolor: 'rgba(0,0,0,0.35)', position: 'absolute', inset: 0}}/>
       <Container sx={{ position: "relative" }}>
         <motion.div variants={container} initial="hidden" whileInView="shown">
-          <Box sx={{ maxWidth: "md", py: 16 }}>
+          <Box sx={{ maxWidth: "sm", py: 12 }}>
             <motion.div variants={opacity}>
               <Typography
                 color="secondary"
@@ -210,7 +228,7 @@ export const Hero = () => {
             <motion.div variants={opacity}>
               <Typography
                 color="secondary"
-                variant="body1"
+                variant="h6"
                 sx={{ mt: 4, mb: 6 }}
               >
                 Bring to the table win-win survival strategies to ensure
