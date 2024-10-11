@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { Suspense } from "react";
 import {
   Chip,
   Typography,
@@ -20,7 +20,7 @@ import NextLink from "next/link";
 
 import services from "../../data/service-data.json";
 
-const Page: React.FC = () => {
+const PageContent: React.FC = () => {
   const searchParams = useSearchParams();
   const currentPanel = searchParams.get("panel") || services[0].id;
 
@@ -137,5 +137,11 @@ const Page: React.FC = () => {
     </>
   );
 };
-
+const Page = () => {
+  return (
+    <Suspense>
+      <PageContent />
+    </Suspense>
+  );
+};
 export default Page;
