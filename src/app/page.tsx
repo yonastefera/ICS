@@ -30,65 +30,30 @@ import {
 } from "@/animation";
 import { motion } from "framer-motion";
 import { Numbers } from "./_components/numbers";
+import { FramedImage } from "./_components/framed-image";
+import { ServiceCarousel } from "./_components/service-carousel";
 
 export default function Home() {
   return (
     <>
-      <Container sx={{ my: 16 }}>
+      <Container sx={{ my: 16, overflow: 'hidden' }}>
         <motion.div
           variants={containerSync}
           initial="hidden"
           whileInView={"shown"}
-          viewport={{ amount: 0.45 }}
         >
           <Grid container spacing={4}>
             <Grid size={{ xs: 12, md: 6 }}>
               <motion.div
                 variants={slideRight}
                 style={{
-                  position: "relative",
-                  height: "75vh",
-                  marginTop: "58px",
-                  marginBottom: "58px",
-                  marginLeft: "auto",
-                  marginRight: "auto",
-                  aspectRatio: "10/12",
+                  width: "100%",
+                  height: "100%",
+                  display: "grid",
+                  placeItems: "center",
                 }}
               >
-                <Image
-                  src="/images/discussion.jpeg"
-                  fill
-                  alt="discussion"
-                  style={{ objectFit: "cover" }}
-                />
-                <Box
-                  sx={{
-                    width: 150,
-                    height: 150,
-                    position: "absolute",
-                    top: -29,
-                    right: -29,
-                    borderStyle: "solid",
-                    borderWidth: 0,
-                    borderTopWidth: 5,
-                    borderRightWidth: 5,
-                    borderColor: "black",
-                  }}
-                />
-                <Box
-                  sx={{
-                    width: 150,
-                    height: 150,
-                    position: "absolute",
-                    bottom: -29,
-                    left: -29,
-                    borderStyle: "solid",
-                    borderWidth: 0,
-                    borderBottomWidth: 5,
-                    borderLeftWidth: 5,
-                    borderColor: "black",
-                  }}
-                />
+                <FramedImage src="/images/discussion.jpeg" />
               </motion.div>
             </Grid>
 
@@ -118,12 +83,20 @@ export default function Home() {
                     <br /> Digital Experiences
                   </Typography>
                   <Typography>
-                    Bring to the table win-win survival strategies to ensure
-                    proactive domination. At the end of the day, going forward,
-                    a new normal that has evolved from generation on the runway
-                    heading towards a streamlined cloud.
+                    Welcome to ICS, where innovation is not just an aspiration
+                    but a driving force behind everything we do. We are
+                    committed to empowering businesses with cutting-edge
+                    solutions that transcend industry standards and pave the way
+                    for sustainable growth and success.
                   </Typography>
-
+                  <Typography>
+                    From pioneering software solutions to spearheading digital
+                    transformations, we thrive on the philosophy that success
+                    isn’t just achieved but cultivated through shared
+                    partnerships and a relentless drive to exceed expectations.
+                    Contact us today to learn more about how ICS can help you
+                    achieve your business goals.
+                  </Typography>
                   <Stack
                     gap={4}
                     sx={{ mt: 4, mb: 6 }}
@@ -188,21 +161,7 @@ export default function Home() {
         </Stack>
 
         <motion.div variants={container} whileInView="shown" initial="hidden">
-          <Grid container spacing={2} mt={6}>
-            {services.slice(0, 3).map((service, index) => (
-              <Grid size={{ xs: 12, md: 4 }} key={`service-card-${index}`}>
-                <motion.div variants={slideUp}>
-                  <ServiceCard
-                    title={service.name}
-                    description={service.descriptions[0]}
-                    order={`0${index + 1}`}
-                    image={service.icon ?? ""}
-                    id={service.id}
-                  />
-                </motion.div>
-              </Grid>
-            ))}
-          </Grid>
+          <ServiceCarousel />
         </motion.div>
       </Container>
 
@@ -226,63 +185,62 @@ export default function Home() {
             </motion.div>
 
             <motion.div variants={opacity}>
-            <Typography gutterBottom>
-              Our team of highly skilled professionals is dedicated to
-              delivering solutions that enhance efficiency, security, and
-              service delivery for both commercial and government clients.
-            </Typography>
+              <Typography gutterBottom>
+                Our team of highly skilled professionals is dedicated to
+                delivering solutions that enhance efficiency, security, and
+                service delivery for both commercial and government clients.
+              </Typography>
             </motion.div>
 
             <motion.div variants={opacity}>
-            <Typography my={3}>
-              Our comprehensive capabilities span the entire IT spectrum,
-              including software development, data analytics, cybersecurity, and
-              digital transformation. Our team of highly skilled professionals
-              is committed to delivering solutions that enhance government
-              efficiency, security, and service delivery.
-            </Typography>
+              <Typography my={3}>
+                Our comprehensive capabilities span the entire IT spectrum,
+                including software development, data analytics, cybersecurity,
+                and digital transformation. Our team of highly skilled
+                professionals is committed to delivering solutions that enhance
+                government efficiency, security, and service delivery.
+              </Typography>
             </motion.div>
 
             <motion.div variants={opacity}>
-            <Stack direction={{ xs: "column", sm: "row" }}>
-              <List
-                sx={{
-                  display: "grid",
-                  gridTemplateColumns: { xs: "1fr", md: "repeat(2, 1fr)" },
-                  gap: 1,
-                }}
-              >
-                <ListItem>
-                  <ListItemIcon>
-                    <SquareIcon color="primary" fontSize="small" />
-                  </ListItemIcon>
-                  <ListItemText>Quick response time</ListItemText>
-                </ListItem>
-                <ListItem>
-                  <ListItemIcon>
-                    <SquareIcon color="primary" fontSize="small" />
-                  </ListItemIcon>
-                  <ListItemText>
-                    Understanding our customer’s needs
-                  </ListItemText>
-                </ListItem>
+              <Stack direction={{ xs: "column", sm: "row" }}>
+                <List
+                  sx={{
+                    display: "grid",
+                    gridTemplateColumns: { xs: "1fr", md: "repeat(2, 1fr)" },
+                    gap: 1,
+                  }}
+                >
+                  <ListItem>
+                    <ListItemIcon>
+                      <SquareIcon color="primary" fontSize="small" />
+                    </ListItemIcon>
+                    <ListItemText>Quick response time</ListItemText>
+                  </ListItem>
+                  <ListItem>
+                    <ListItemIcon>
+                      <SquareIcon color="primary" fontSize="small" />
+                    </ListItemIcon>
+                    <ListItemText>
+                      Understanding our customer’s needs
+                    </ListItemText>
+                  </ListItem>
 
-                <ListItem>
-                  <ListItemIcon>
-                    <SquareIcon color="primary" fontSize="small" />
-                  </ListItemIcon>
-                  <ListItemText>High level of professionalism</ListItemText>
-                </ListItem>
-                <ListItem>
-                  <ListItemIcon>
-                    <SquareIcon color="primary" fontSize="small" />
-                  </ListItemIcon>
-                  <ListItemText>Incredible customer service</ListItemText>
-                </ListItem>
-              </List>
-            </Stack>
+                  <ListItem>
+                    <ListItemIcon>
+                      <SquareIcon color="primary" fontSize="small" />
+                    </ListItemIcon>
+                    <ListItemText>High level of professionalism</ListItemText>
+                  </ListItem>
+                  <ListItem>
+                    <ListItemIcon>
+                      <SquareIcon color="primary" fontSize="small" />
+                    </ListItemIcon>
+                    <ListItemText>Incredible customer service</ListItemText>
+                  </ListItem>
+                </List>
+              </Stack>
             </motion.div>
-
           </Box>
         </motion.div>
       </Container>
@@ -316,15 +274,22 @@ export default function Home() {
                   textAlign={"center"}
                   maxWidth="md"
                 >
-                  As a forward-thinking IT solutions provider, our company
-                  stands at the forefront of innovation, offering a robust
-                  capability statement tailored for you
+                  Our comprehensive capabilities span the entire IT spectrum,
+                  including software development, data analytics, cybersecurity,
+                  AI/ML, cloud computing, and digital transformation. By
+                  harnessing the latest technologies such as automation,
+                  blockchain, and IoT, our team of highly skilled professionals
+                  is committed to delivering innovative solutions that enhance
+                  efficiency, security, and service delivery for both commercial
+                  and government projects, big and small.
                 </Typography>
               </motion.div>
 
               <motion.div variants={opacity}>
                 <Typography color="secondary" maxWidth="md" mt={2} mb={4}>
-                  Learn more why our clients trust ICS with there projects
+                  Explore our proven track record and credentials by downloading
+                  our capability statement, which highlights our past clients
+                  and government certifications.
                 </Typography>
               </motion.div>
 

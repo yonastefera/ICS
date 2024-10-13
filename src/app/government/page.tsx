@@ -15,6 +15,7 @@ import Grid from "@mui/material/Grid2";
 import Image from "next/image";
 import { Fragment } from "react";
 import { InfoCard } from "./_components/info-card";
+import { FramedImage } from "../_components/framed-image";
 
 const profile = [
   {
@@ -95,47 +96,13 @@ const Page = () => {
           >
             <Box
               sx={{
-                position: "relative",
-                my: "58px",
-                height: '75vh',
-                mx: "auto",
-                aspectRatio: "10/12",
+                width: "100%",
+                height: "100%",
+                display: "grid",
+                placeItems: "center",
               }}
             >
-              <Image
-                src="/images/discussion.jpeg"
-                fill
-                alt="discussion"
-                style={{ objectFit: "cover" }}
-              />
-              <Box
-                sx={{
-                  width: 150,
-                  height: 150,
-                  position: "absolute",
-                  top: -29,
-                  right: -29,
-                  borderStyle: "solid",
-                  borderWidth: 0,
-                  borderTopWidth: 5,
-                  borderRightWidth: 5,
-                  borderColor: "black",
-                }}
-              />
-              <Box
-                sx={{
-                  width: 150,
-                  height: 150,
-                  position: "absolute",
-                  bottom: -29,
-                  left: -29,
-                  borderStyle: "solid",
-                  borderWidth: 0,
-                  borderBottomWidth: 5,
-                  borderLeftWidth: 5,
-                  borderColor: "black",
-                }}
-              />
+              <FramedImage src="/images/discussion.jpeg" priority={true} />
             </Box>
           </Grid>
         </Grid>

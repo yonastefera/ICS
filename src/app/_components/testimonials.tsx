@@ -1,6 +1,6 @@
 import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
 import "swiper/css";
-import { IconButton, Stack, Typography } from "@mui/material";
+import { IconButton, Stack, Typography, useTheme } from "@mui/material";
 import FormatQuoteIcon from "@mui/icons-material/FormatQuote";
 
 import Grid from "@mui/material/Grid2";
@@ -11,6 +11,8 @@ import { motion } from "framer-motion";
 import { containerSync, slideLeft, slideRight } from "@/animation";
 
 export const Testimonials = () => {
+  const theme = useTheme();
+
   return (
     <>
       <Swiper loop>
@@ -40,9 +42,11 @@ export const Testimonials = () => {
                     >
                       <Image
                         src="/images/discussion.jpeg"
-                        layout="fill"
-                        objectFit="cover"
-                        style={{}}
+                        fill
+                        sizes={`${theme.breakpoints.down(
+                          "sm"
+                        )} 100vw, ${theme.breakpoints.up("sm")} 520`}
+                        style={{ objectFit: "cover" }}
                         alt="logo"
                       />
                     </motion.div>

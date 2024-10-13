@@ -155,6 +155,7 @@
     {
         "id": "enterprise_it_solutions",
         "name": "Enterprise IT Solutions",
+        "icon":"/images/service-icons/web-service-icon.svg",
         "descriptions": [
           "Our unwavering commitment lies in simplifying the migration process, ensuring a seamless transition that aligns with your unique business objectives. Whether you seek enhanced scalability, cost optimization, or seamless collaboration, our team of seasoned experts will meticulously guide you through every step of the cloud migration process, unlocking the full potential of cloud technologies.",
           "Equipped with in-depth expertise in cloud platforms and industry best practices, we empower your organization to seamlessly integrate cloud services into your digital infrastructure, unlocking a spectrum of transformative benefits.",
@@ -205,6 +206,7 @@
     {
       "id": "digital_transformation",
       "name": "Digital Transformation",
+      "icon":"/images/service-icons/globe-network-icon.svg",
       "descriptions": [
         "Our unwavering commitment lies in simplifying the migration process, ensuring a seamless transition that aligns with your unique business objectives. Whether you seek enhanced scalability, cost optimization, or seamless collaboration, our team of seasoned experts will meticulously guide you through every step of the cloud migration process, unlocking the full potential of cloud technologies.",
         "Equipped with in-depth expertise in cloud platforms and industry best practices, we empower your organization to seamlessly integrate cloud services into your digital infrastructure, unlocking a spectrum of transformative benefits.",
@@ -255,6 +257,7 @@
     {
       "id": "artificial_intelligence",
       "name": "Artificial Intelligence (AI)",
+      "icon":"/images/service-icons/microchip-icon.svg",
       "descriptions": [
         "Unlock the future with our cutting-edge Artificial Intelligence solutions. Harness the power of advanced algorithms and machine learning to drive innovation, enhance efficiency, and transform your business operations.",
         "Our AI technology empowers organizations to make data-driven decisions, automate routine tasks, and uncover valuable insights.",

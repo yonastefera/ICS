@@ -72,7 +72,7 @@ export const Header = () => {
                 component={NextLink}
                 href="/"
                 color="warning"
-                variant="h5"
+                variant="h4"
                 fontWeight={700}
               >
                 ICS
@@ -204,7 +204,7 @@ export const Hero = () => {
       <Box sx={{bgcolor: 'rgba(0,0,0,0.35)', position: 'absolute', inset: 0}}/>
       <Container sx={{ position: "relative" }}>
         <motion.div variants={container} initial="hidden" whileInView="shown">
-          <Box sx={{ maxWidth: "sm", py: 12 }}>
+          <Box sx={{ maxWidth: "md", py: 12 }}>
             <motion.div variants={opacity}>
               <Typography
                 color="secondary"
@@ -212,17 +212,25 @@ export const Hero = () => {
                 fontWeight={700}
                 lineHeight={1.2}
               >
-                Driven By{" "}
+                Transforming{" "}
                 <Typography
-                  color="primary"
+                  color="secondary"
                   component={"span"}
                   variant="h2"
                   fontWeight={700}
                   lineHeight={1.2}
                 >
-                  Quality
+                  Business with
                 </Typography>{" "}
-                & Dedicated to Solutions
+                <Typography 
+                  color="primary"
+                  component={"span"}
+                  variant="h2"
+                  fontWeight={700}
+                  lineHeight={1.2}>
+                  Technology
+                </Typography>{" "}
+               
               </Typography>
             </motion.div>
             <motion.div variants={opacity}>
@@ -231,9 +239,8 @@ export const Hero = () => {
                 variant="h6"
                 sx={{ mt: 4, mb: 6 }}
               >
-                Bring to the table win-win survival strategies to ensure
-                proactive domination. At the end of the day, going forward, a
-                new normal
+                Since 2017, Icreativv Consulting and Service, LLC has provided Enterprise IT, 
+                Software Engineering, Cybersecurity, AI/ML Solutions, and Project Management expertise.
               </Typography>
             </motion.div>
             <motion.div variants={opacity}>

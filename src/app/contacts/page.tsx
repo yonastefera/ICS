@@ -29,7 +29,7 @@ const Page = () => {
             <ContactCard
               icon={<EmailIcon color={"secondary"} sx={{ fontSize: 48 }} />}
               primary="mail@icreativv.com"
-              secondary="Info.icreativv@gmail.com"
+              secondary="yonas.tefera30@gmail.com"
               title={"Mail Address"}
             ></ContactCard>
           </Grid>

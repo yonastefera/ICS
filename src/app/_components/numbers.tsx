@@ -15,7 +15,7 @@ export const Numbers = () => {
   useEffect(() => {
     animate(experience, 10, { duration: 1 });
     animate(projects, 50, { duration: 1 });
-    animate(teams, 120, { duration: 1 });
+    animate(teams, 20, { duration: 1 });
   }, []);
 
   return (
@@ -36,7 +36,7 @@ export const Numbers = () => {
         <Typography fontWeight={700} gutterBottom>
           <motion.span>{teamRounded}</motion.span>+
         </Typography>
-        <Typography>Team members</Typography>
+        <Typography>Clients</Typography>
       </Box>
     </>
   );

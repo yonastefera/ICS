@@ -17,6 +17,7 @@ import Grid from "@mui/material/Grid2";
 import Image from "next/image";
 import SquareIcon from "@mui/icons-material/Square";
 import users from "../../data/users-data.json";
+import { FramedImage } from "../_components/framed-image";
 
 const Page = () => {
   return (
@@ -26,47 +27,13 @@ const Page = () => {
           <Grid size={{ xs: 12, md: 6 }}>
             <Box
               sx={{
-                position: "relative",
-                height: "75vh",
-                my: "58px",
-                mx: "auto",
-                aspectRatio: "10/12",
+                width: "100%",
+                height: "100%",
+                display: "grid",
+                placeItems: "center",
               }}
             >
-              <Image
-                src="/images/discussion.jpeg"
-                fill
-                alt="discussion"
-                style={{ objectFit: "cover" }}
-              />
-              <Box
-                sx={{
-                  width: 150,
-                  height: 150,
-                  position: "absolute",
-                  top: -29,
-                  right: -29,
-                  borderStyle: "solid",
-                  borderWidth: 0,
-                  borderTopWidth: 5,
-                  borderRightWidth: 5,
-                  borderColor: "black",
-                }}
-              />
-              <Box
-                sx={{
-                  width: 150,
-                  height: 150,
-                  position: "absolute",
-                  bottom: -29,
-                  left: -29,
-                  borderStyle: "solid",
-                  borderWidth: 0,
-                  borderBottomWidth: 5,
-                  borderLeftWidth: 5,
-                  borderColor: "black",
-                }}
-              />
+              <FramedImage src="/images/discussion.jpeg" priority={true} />
             </Box>
           </Grid>
 
@@ -94,8 +61,8 @@ const Page = () => {
                   <Typography variant="body1">
                     Established in 2017, Icreativv Consulting and Service (ICS)
                     is a leading technology solutions provider based in Atlanta,
-                    Georgia. Committed to prioritizing our clients&apos; needs, we
-                    deliver exceptional solutions and services at competitive
+                    Georgia. Committed to prioritizing our clients&apos; needs,
+                    we deliver exceptional solutions and services at competitive
                     prices.
                   </Typography>
                   <Typography variant="body1">
@@ -124,47 +91,13 @@ const Page = () => {
           <Grid size={{ xs: 12, md: 6 }} order={{ xs: 1, md: 2 }}>
             <Box
               sx={{
-                position: "relative",
-                height: "75vh",
-                my: "58px",
-                mx: "auto",
-                aspectRatio: "10/12",
+                width: "100%",
+                height: "100%",
+                display: "grid",
+                placeItems: "center",
               }}
             >
-              <Image
-                src="/images/discussion.jpeg"
-                fill
-                alt="discussion"
-                style={{ objectFit: "cover" }}
-              />
-              <Box
-                sx={{
-                  width: 150,
-                  height: 150,
-                  position: "absolute",
-                  top: -29,
-                  right: -29,
-                  borderStyle: "solid",
-                  borderWidth: 0,
-                  borderTopWidth: 5,
-                  borderRightWidth: 5,
-                  borderColor: "black",
-                }}
-              />
-              <Box
-                sx={{
-                  width: 150,
-                  height: 150,
-                  position: "absolute",
-                  bottom: -29,
-                  left: -29,
-                  borderStyle: "solid",
-                  borderWidth: 0,
-                  borderBottomWidth: 5,
-                  borderLeftWidth: 5,
-                  borderColor: "black",
-                }}
-              />
+              <FramedImage src="/images/discussion.jpeg" />
             </Box>
           </Grid>
 
@@ -206,47 +139,13 @@ const Page = () => {
           <Grid size={{ xs: 12, md: 6 }}>
             <Box
               sx={{
-                position: "relative",
-                height: "75vh",
-                my: "58px",
-                mx: "auto",
-                aspectRatio: "10/12",
+                width: "100%",
+                height: "100%",
+                display: "grid",
+                placeItems: "center",
               }}
             >
-              <Image
-                src="/images/discussion.jpeg"
-                fill
-                alt="discussion"
-                style={{ objectFit: "cover" }}
-              />
-              <Box
-                sx={{
-                  width: 150,
-                  height: 150,
-                  position: "absolute",
-                  top: -29,
-                  right: -29,
-                  borderStyle: "solid",
-                  borderWidth: 0,
-                  borderTopWidth: 5,
-                  borderRightWidth: 5,
-                  borderColor: "black",
-                }}
-              />
-              <Box
-                sx={{
-                  width: 150,
-                  height: 150,
-                  position: "absolute",
-                  bottom: -29,
-                  left: -29,
-                  borderStyle: "solid",
-                  borderWidth: 0,
-                  borderBottomWidth: 5,
-                  borderLeftWidth: 5,
-                  borderColor: "black",
-                }}
-              />
+              <FramedImage src="/images/discussion.jpeg" />
             </Box>
           </Grid>
 
@@ -341,7 +240,10 @@ const Page = () => {
 
         <Grid container spacing={2}>
           {users.map((user, index) => (
-            <Grid size={{ xs: 12, sm: 6, md: 4, lg: 3 }} key={`team-member-${index}`}>
+            <Grid
+              size={{ xs: 12, sm: 6, md: 4, lg: 3 }}
+              key={`team-member-${index}`}
+            >
               <Card elevation={0}>
                 <CardMedia sx={{ height: 420, position: "relative" }}>
                   <Image
