@@ -121,7 +121,11 @@ function Footer() {
               <ListItem>
                 <ListItemText
                   primary={
-                    <Typography color="textSecondary" variant="h6" component={'h3'}>
+                    <Typography
+                      color="textSecondary"
+                      variant="h6"
+                      component={"h3"}
+                    >
                       Pages
                     </Typography>
                   }
@@ -129,7 +133,7 @@ function Footer() {
               </ListItem>
 
               <Stack direction="column">
-                {pages.slice(1).map((link) => (
+                {pages.map((link) => (
                   <ListItem disablePadding key={link.label}>
                     <ListItemButton LinkComponent={NextLink} href={link.href}>
                       <ListItemText
@@ -149,7 +153,11 @@ function Footer() {
               <ListItem>
                 <ListItemText
                   primary={
-                    <Typography color="textSecondary" variant="h6" component={'h3'}>
+                    <Typography
+                      color="textSecondary"
+                      variant="h6"
+                      component={"h3"}
+                    >
                       Services
                     </Typography>
                   }
@@ -181,7 +189,11 @@ function Footer() {
               <ListItem>
                 <ListItemText
                   primary={
-                    <Typography color="textSecondary" variant="h6" component={'h3'}>
+                    <Typography
+                      color="textSecondary"
+                      variant="h6"
+                      component={"h3"}
+                    >
                       Contact Us
                     </Typography>
                   }
@@ -260,19 +272,23 @@ function Footer() {
               >
                 Terms and Conditions
               </Link>
-              <Divider
-                orientation="vertical"
-                flexItem
-                sx={{ borderColor: "secondary.main" }}
-              />
-              <Link
-                variant="body2"
-                color="secondary"
-                href="/legal/privacy-policy"
-                component={NextLink}
-              >
-                Privacy Policy
-              </Link>
+              {false && (
+                <>
+                  <Divider
+                    orientation="vertical"
+                    flexItem
+                    sx={{ borderColor: "secondary.main" }}
+                  />
+                  <Link
+                    variant="body2"
+                    color="secondary"
+                    href="/legal/privacy-policy"
+                    component={NextLink}
+                  >
+                    Privacy Policy
+                  </Link>
+                </>
+              )}
             </Stack>
           </Stack>
         </Container>

@@ -21,7 +21,7 @@ import { FramedImage } from "../_components/framed-image";
 
 const Page = () => {
   return (
-    <>
+    <main>
       <Container sx={{ my: 16 }}>
         <Grid container spacing={4}>
           <Grid size={{ xs: 12, md: 6 }}>
@@ -54,6 +54,7 @@ const Page = () => {
                   fontFamily={'"Barlow Condensed", sans-serif'}
                   fontWeight="bold"
                   color="primary"
+                  component={'h1'}
                 >
                   About Us
                 </Typography>
@@ -117,6 +118,7 @@ const Page = () => {
                   fontFamily={'"Barlow Condensed", sans-serif'}
                   fontWeight="bold"
                   color="primary"
+                  component={'h2'}
                 >
                   Our Mission
                 </Typography>
@@ -165,6 +167,7 @@ const Page = () => {
                   fontFamily={'"Barlow Condensed", sans-serif'}
                   fontWeight="bold"
                   color="primary"
+                  component={'h2'}
                 >
                   Our Values
                 </Typography>
@@ -266,7 +269,7 @@ const Page = () => {
           ))}
         </Grid>
       </Container>
-    </>
+    </main>
   );
 };
 

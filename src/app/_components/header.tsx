@@ -29,7 +29,6 @@ import { motion } from "framer-motion";
 import { container, opacity } from "@/animation";
 
 export const headerLinks = [
-  { label: "Home", href: "/" },
   { label: "About Us", href: "/about-us" },
   { label: "Services", href: "/services" },
   { label: "Government", href: "/government" },
