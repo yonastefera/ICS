@@ -101,7 +101,7 @@ const Page = () => {
                 placeItems: "center",
               }}
             >
-              <FramedImage src="/images/discussion.jpeg" priority={true} />
+              <FramedImage src="/images/discussion.jpeg" alt="discussion"  priority={true} />
             </Box>
           </Grid>
         </Grid>

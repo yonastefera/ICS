@@ -31,7 +31,7 @@ import { ServiceCarousel } from "./_components/service-carousel";
 
 export default function Home() {
   return (
-    <>
+    <main>
       <Container sx={{ my: 16, overflow: "hidden" }}>
         <motion.div
           variants={containerSync}
@@ -49,7 +49,7 @@ export default function Home() {
                   placeItems: "center",
                 }}
               >
-                <FramedImage src="/images/discussion.jpeg" />
+                <FramedImage src="/images/discussion.jpeg" alt="ICS employees" />
               </motion.div>
             </Grid>
 
@@ -74,6 +74,7 @@ export default function Home() {
                     gutterBottom
                     fontFamily={'"Barlow Condensed", sans-serif'}
                     fontWeight="bold"
+                    component={'h2'}
                   >
                     We Make Your Business harness technology to propel your
                     business forward and Smart
@@ -131,6 +132,7 @@ export default function Home() {
               gutterBottom
               fontFamily={'"Barlow Condensed", sans-serif'}
               fontWeight="bold"
+              component={'h2'}
             >
               What We Can Do For <br /> Our Clients
             </Typography>
@@ -175,6 +177,7 @@ export default function Home() {
                 gutterBottom
                 fontFamily={'"Barlow Condensed", sans-serif'}
                 fontWeight="bold"
+                component={'h2'}
               >
                 We excel in software solutions with a decade of expertise.
               </Typography>
@@ -258,6 +261,7 @@ export default function Home() {
                   fontWeight="bold"
                   color="textSecondary"
                   textAlign={"center"}
+                  component={'h2'}
                 >
                   Elevate your Projects with ICS
                 </Typography>
@@ -315,6 +319,7 @@ export default function Home() {
           gutterBottom
           fontFamily={'"Barlow Condensed", sans-serif'}
           fontWeight="bold"
+          component={'h2'}
         >
           Check Out What Our Clients Have To Say
         </Typography>
@@ -322,6 +327,6 @@ export default function Home() {
           <Testimonials />
         </Box>
       </Container>
-    </>
+    </main>
   );
 }

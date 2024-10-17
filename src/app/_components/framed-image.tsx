@@ -3,7 +3,7 @@
 import { Box, useTheme } from "@mui/material";
 import Image from "next/image";
 
-export const FramedImage: React.FC<{ src: string, priority?: boolean }> = ({ src, priority }) => {
+export const FramedImage: React.FC<{ src: string, alt: string, priority?: boolean }> = ({ src, alt, priority }) => {
   const theme = useTheme();
 
   return (
@@ -21,7 +21,7 @@ export const FramedImage: React.FC<{ src: string, priority?: boolean }> = ({ src
         <Image
           src={src}
           fill
-          alt="discussion"
+          alt={alt}
           sizes={`${theme.breakpoints.down("sm")} 100vw, ${theme.breakpoints.up(
             "sm"
           )} 460px`}

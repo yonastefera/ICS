@@ -121,7 +121,7 @@ function Footer() {
               <ListItem>
                 <ListItemText
                   primary={
-                    <Typography color="textSecondary" variant="h6">
+                    <Typography color="textSecondary" variant="h6" component={'h3'}>
                       Pages
                     </Typography>
                   }
@@ -149,7 +149,7 @@ function Footer() {
               <ListItem>
                 <ListItemText
                   primary={
-                    <Typography color="textSecondary" variant="h6">
+                    <Typography color="textSecondary" variant="h6" component={'h3'}>
                       Services
                     </Typography>
                   }
@@ -160,7 +160,7 @@ function Footer() {
                 {services.map((link) => (
                   <ListItem disablePadding key={link.id}>
                     <ListItemButton
-                      aria-label="Navigate to Home"
+                      aria-label={`Navigate to ${link.name} service`}
                       LinkComponent={NextLink}
                       href={`/services?panel=${link.id}#${link.id}`}
                     >

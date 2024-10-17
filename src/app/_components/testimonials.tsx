@@ -101,7 +101,7 @@ const Arrow = ({ forward }: { forward?: boolean }) => {
 
   return (
     <>
-      <IconButton>
+      <IconButton type="button" aria-label={forward ? "Next" : "Previous"}>
         {!forward ? (
           <ChevronLeftIcon
             color="primary"

@@ -89,6 +89,7 @@ export const NewsLetter = () => {
                 onChange={handleChange}
                 helperText={touched.email ? errors.email : undefined}
                 error={touched.email && !!errors.email}
+                label="Email"
                 sx={{
                   width: "100%",
                   color: "white",

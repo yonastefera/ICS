@@ -33,7 +33,7 @@ const Page = () => {
                 placeItems: "center",
               }}
             >
-              <FramedImage src="/images/discussion.jpeg" priority={true} />
+              <FramedImage src="/images/discussion.jpeg" priority={true} alt="discussion"/>
             </Box>
           </Grid>
 
@@ -97,7 +97,7 @@ const Page = () => {
                 placeItems: "center",
               }}
             >
-              <FramedImage src="/images/discussion.jpeg" />
+              <FramedImage src="/images/discussion.jpeg"  alt="discussion"/>
             </Box>
           </Grid>
 
@@ -145,11 +145,11 @@ const Page = () => {
                 placeItems: "center",
               }}
             >
-              <FramedImage src="/images/discussion.jpeg" />
+              <FramedImage src="/images/discussion.jpeg" alt="discussion" />
             </Box>
           </Grid>
 
-          <Grid size={{ xs: 12, md: 6 }}>
+          <Grid size={{ xs: 12, md: 6 }}> 
             <Box
               sx={{
                 wdith: "100%",

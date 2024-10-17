@@ -40,13 +40,14 @@ export const ServiceCard: React.FC<{
               src={image}
               width={55}
               height={55}
-              alt={title}
+              alt={`${title} image`}
               style={{ margin: "0 auto" }}
             />
             <Box sx={{}}>
               <Typography
                 color="textSecondary"
                 variant="h6"
+                component={'h3'}
                 fontWeight={700}
                 gutterBottom
                 sx={{ textAlign: "center" }}
