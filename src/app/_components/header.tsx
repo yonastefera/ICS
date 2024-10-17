@@ -111,6 +111,8 @@ export const Header = () => {
                   color="secondary"
                   sx={{ display: { md: "none" } }}
                   onClick={() => setMenuShown(() => true)}
+                  type="button"
+                  aria-label="Open menu"
                 >
                   <MenuIcon />
                 </IconButton>
@@ -135,7 +137,8 @@ export const Header = () => {
             <Typography variant="h5" fontWeight={700}>
               ICS
             </Typography>
-            <IconButton onClick={() => setMenuShown(false)}>
+            <IconButton onClick={() => setMenuShown(false)} type="button"
+                  aria-label="Close menu">
               <CloseIcon />
             </IconButton>
           </Toolbar>

@@ -40,7 +40,7 @@ export const ServiceCard: React.FC<{
               src={image}
               width={55}
               height={55}
-              alt={`${title} image`}
+              alt={`${title} service`}
               style={{ margin: "0 auto" }}
             />
             <Box sx={{}}>

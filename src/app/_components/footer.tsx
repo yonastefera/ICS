@@ -59,7 +59,7 @@ function Footer() {
           color="primary"
         >
           <Stack
-            component={"p"}
+            component={"h3"}
             alignItems={"center"}
             sx={{
               borderBottom: (theme) =>
@@ -129,7 +129,7 @@ function Footer() {
               </ListItem>
 
               <Stack direction="column">
-                {pages.map((link) => (
+                {pages.slice(1).map((link) => (
                   <ListItem disablePadding key={link.label}>
                     <ListItemButton LinkComponent={NextLink} href={link.href}>
                       <ListItemText
@@ -181,7 +181,7 @@ function Footer() {
               <ListItem>
                 <ListItemText
                   primary={
-                    <Typography color="textSecondary" variant="h6">
+                    <Typography color="textSecondary" variant="h6" component={'h3'}>
                       Contact Us
                     </Typography>
                   }

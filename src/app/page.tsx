@@ -74,7 +74,7 @@ export default function Home() {
                     gutterBottom
                     fontFamily={'"Barlow Condensed", sans-serif'}
                     fontWeight="bold"
-                    component={'h2'}
+                    component={'h1'}
                   >
                     We Make Your Business harness technology to propel your
                     business forward and Smart
