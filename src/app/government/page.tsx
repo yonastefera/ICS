@@ -12,7 +12,6 @@ import {
   Typography,
 } from "@mui/material";
 import Grid from "@mui/material/Grid2";
-import Image from "next/image";
 import { Fragment } from "react";
 import { InfoCard } from "./_components/info-card";
 import { FramedImage } from "../_components/framed-image";

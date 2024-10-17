@@ -14,11 +14,8 @@ import {
 } from "@mui/material";
 import ArrowOutwardIcon from "@mui/icons-material/ArrowOutward";
 import Grid from "@mui/material/Grid2";
-import Image from "next/image";
-import { ServiceCard } from "./_components/service-card";
 import SquareIcon from "@mui/icons-material/Square";
 import { Testimonials } from "./_components/testimonials";
-import services from "../data/service-data.json";
 import NextLink from "next/link";
 import {
   container,
@@ -26,7 +23,6 @@ import {
   opacity,
   slideLeft,
   slideRight,
-  slideUp,
 } from "@/animation";
 import { motion } from "framer-motion";
 import { Numbers } from "./_components/numbers";
@@ -36,7 +32,7 @@ import { ServiceCarousel } from "./_components/service-carousel";
 export default function Home() {
   return (
     <>
-      <Container sx={{ my: 16, overflow: 'hidden' }}>
+      <Container sx={{ my: 16, overflow: "hidden" }}>
         <motion.div
           variants={containerSync}
           initial="hidden"
@@ -79,10 +75,10 @@ export default function Home() {
                     fontFamily={'"Barlow Condensed", sans-serif'}
                     fontWeight="bold"
                   >
-                    We Create Impactful
-                    <br /> Digital Experiences
+                    We Make Your Business harness technology to propel your
+                    business forward and Smart
                   </Typography>
-                  <Typography>
+                  <Typography gutterBottom>
                     Welcome to ICS, where innovation is not just an aspiration
                     but a driving force behind everything we do. We are
                     committed to empowering businesses with cutting-edge

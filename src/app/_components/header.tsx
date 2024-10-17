@@ -59,7 +59,7 @@ export const Header = () => {
               : bgColor,
           }}
         >
-          <Container sx={{ position: "relative" }} maxWidth={false}>
+          <Container sx={{ position: "relative" }}>
             <Toolbar
               sx={{
                 bgcolor: "transparent",
@@ -183,7 +183,7 @@ export const Hero = () => {
         pt: "96px",
         minHeight: "100vh",
         position: "relative",
-        overflow: 'hidden'
+        overflow: "hidden",
       }}
     >
       {/* <video
@@ -201,46 +201,39 @@ export const Hero = () => {
       >
         <source src="/bg.mp4" type="video/mp4" />
       </video> */}
-      <Box sx={{bgcolor: 'rgba(0,0,0,0.35)', position: 'absolute', inset: 0}}/>
+      <Box
+        sx={{ bgcolor: "rgba(0,0,0,0.35)", position: "absolute", inset: 0 }}
+      />
       <Container sx={{ position: "relative" }}>
         <motion.div variants={container} initial="hidden" whileInView="shown">
-          <Box sx={{ maxWidth: "md", py: 12 }}>
+          <Box sx={{ maxWidth: "sm", py: 12 }}>
             <motion.div variants={opacity}>
               <Typography
                 color="secondary"
                 variant="h2"
+                component={"h1"}
                 fontWeight={700}
                 lineHeight={1.2}
+                fontSize={{ xs: "10vw", sm: "6.5vw", md: "4.5vw" }}
               >
-                Transforming{" "}
+                Transforming Business with{" "}
                 <Typography
-                  color="secondary"
-                  component={"span"}
-                  variant="h2"
-                  fontWeight={700}
-                  lineHeight={1.2}
-                >
-                  Business with
-                </Typography>{" "}
-                <Typography 
                   color="primary"
                   component={"span"}
                   variant="h2"
                   fontWeight={700}
-                  lineHeight={1.2}>
+                  lineHeight={1.2}
+                  fontSize={{ xs: "10vw", sm: "6.5vw", md: "4.5vw" }}
+                >
                   Technology
                 </Typography>{" "}
-               
               </Typography>
             </motion.div>
             <motion.div variants={opacity}>
-              <Typography
-                color="secondary"
-                variant="h6"
-                sx={{ mt: 4, mb: 6 }}
-              >
-                Since 2017, Icreativv Consulting and Service, LLC has provided Enterprise IT, 
-                Software Engineering, Cybersecurity, AI/ML Solutions, and Project Management expertise.
+              <Typography color="secondary" variant="h6" sx={{ mt: 4, mb: 6 }}>
+                ICS was Founded in 2017. Icreativv Consulting and Service, LLC
+                offers Enterprise IT Solutions, Software Engineering,
+                Cybersecurity, and Program & Project Management.
               </Typography>
             </motion.div>
             <motion.div variants={opacity}>

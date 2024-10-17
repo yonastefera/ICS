@@ -1,0 +1,9 @@
+.swiper-pagination-horizontal{
+  position: relative;
+  margin-top: 16px;
+}
+
+.swiper-pagination-bullet{
+    width: 12px;
+    height: 12px;
+}
