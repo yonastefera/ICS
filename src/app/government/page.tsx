@@ -63,6 +63,7 @@ const Page = () => {
                 fontFamily={'"Barlow Condensed", sans-serif'}
                 fontWeight="bold"
                 color="primary"
+                component={"h1"}
               >
                 Empowering Government Clients
               </Typography>
@@ -127,6 +128,7 @@ const Page = () => {
               fontFamily={'"Barlow Condensed", sans-serif'}
               fontWeight="bold"
               color="primary"
+              component={"h2"}
             >
               Company Profile
             </Typography>
@@ -171,6 +173,7 @@ const Page = () => {
             fontFamily={'"Barlow Condensed", sans-serif'}
             fontWeight="bold"
             color="textSecondary"
+            component={"h2"}
           >
             Government Information
           </Typography>

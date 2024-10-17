@@ -74,6 +74,7 @@ export const SendMessage = () => {
           fontWeight="700"
           color="textSecondary"
           fontFamily={'"Barlow Condensed", sans-serif'}
+          component={'h1'}
         >
           Leave a message
         </Typography>

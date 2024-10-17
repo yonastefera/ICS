@@ -28,7 +28,7 @@ const PageContent: React.FC = () => {
     <>
       <Box
         sx={{
-          bgcolor: "black",
+          bgcolor: "tertiary",
           backgroundImage: "url(/images/footer-bg.jpeg)",
           backgroundSize: "cover",
           backgroundPosition: "center",
@@ -48,6 +48,7 @@ const PageContent: React.FC = () => {
             fontFamily={'"Barlow Condensed", sans-serif'}
             fontWeight="bold"
             color="textSecondary"
+            component={"h1"}
             sx={{ mt: 2 }}
           >
             Service we can help you with
