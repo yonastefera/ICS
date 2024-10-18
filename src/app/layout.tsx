@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     url: "https://www.linkedin.com/company/icreativv-consulting-services"
   },
   alternates: {
-    canonical: `${process.env.DOMAIN}`,
+    canonical: `https://www.icreativv.com`,
   },
   twitter: {
     card: "summary",
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     // site: "@twitterhandle",
   },
   openGraph: {
-    url: `${process.env.DOMAIN}`,
+    url: `https://www.icreativv.com`,
     type: "website",
     title,
     description,

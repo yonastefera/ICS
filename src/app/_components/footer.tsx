@@ -21,61 +21,67 @@ import ArrowOutwardIcon from "@mui/icons-material/ArrowOutward";
 import { headerLinks } from "./header";
 import services from "@/data/service-data.json";
 import NextLink from "next/link";
+import { usePathname } from "next/navigation";
 
 function Footer() {
   const pages = [...headerLinks, { label: "Contact Us", href: "/contacts" }];
+  const pathName = usePathname();
 
   return (
     <footer>
-      <Box
-        sx={{
-          bgcolor: "black",
-          backgroundImage: "url(/images/footer-bg.jpeg)",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          position: "relative",
-          py: 6,
-          my: 16,
-        }}
-      >
+      {!pathName.startsWith("/legal") && (
         <Box
           sx={{
             bgcolor: "black",
-            position: "absolute",
-            inset: 0,
-            opacity: 0.15,
+            backgroundImage: "url(/images/footer-bg.jpeg)",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            position: "relative",
+            py: 6,
+            my: 16,
           }}
-        />
-        <Container sx={{ position: "relative" }}>
-          <NewsLetter />
-        </Container>
-      </Box>
-
-      <Container sx={{ my: 16 }}>
-        <Link
-          component={NextLink}
-          href="/contacts#form"
-          sx={{ fontSize: { xs: "10vw", md: "4.5vw" }, fontWeight: "bold" }}
-          color="primary"
         >
-          <Stack
-            component={"h3"}
-            alignItems={"center"}
+          <Box
             sx={{
-              borderBottom: (theme) =>
-                `1px solid ${theme.palette.primary.main}`,
-              display: "inline-flex",
+              bgcolor: "black",
+              position: "absolute",
+              inset: 0,
+              opacity: 0.15,
             }}
-            gap={2}
+          />
+          <Container sx={{ position: "relative" }}>
+            <NewsLetter />
+          </Container>
+        </Box>
+      )}
+
+      {!pathName.startsWith("/legal") && (
+        <Container sx={{ my: 16 }}>
+          <Link
+            component={NextLink}
+            href="/contacts#form"
+            sx={{ fontSize: { xs: "10vw", md: "4.5vw" }, fontWeight: "bold" }}
+            color="primary"
           >
-            <span>LET’S TALK!</span>
-            <ArrowOutwardIcon
-              color="primary"
-              sx={{ fontSize: { xs: "10vw", md: "4.5vw" } }}
-            />
-          </Stack>
-        </Link>
-      </Container>
+            <Stack
+              component={"h3"}
+              alignItems={"center"}
+              sx={{
+                borderBottom: (theme) =>
+                  `1px solid ${theme.palette.primary.main}`,
+                display: "inline-flex",
+              }}
+              gap={2}
+            >
+              <span>LET’S TALK!</span>
+              <ArrowOutwardIcon
+                color="primary"
+                sx={{ fontSize: { xs: "10vw", md: "4.5vw" } }}
+              />
+            </Stack>
+          </Link>
+        </Container>
+      )}
 
       <Box
         component="footer"
@@ -270,25 +276,24 @@ function Footer() {
                 href="/legal/privacy-policy"
                 component={NextLink}
               >
-                Terms and Conditions
+                Privacy statement
               </Link>
-              {false && (
-                <>
-                  <Divider
-                    orientation="vertical"
-                    flexItem
-                    sx={{ borderColor: "secondary.main" }}
-                  />
-                  <Link
-                    variant="body2"
-                    color="secondary"
-                    href="/legal/privacy-policy"
-                    component={NextLink}
-                  >
-                    Privacy Policy
-                  </Link>
-                </>
-              )}
+
+              <>
+                <Divider
+                  orientation="vertical"
+                  flexItem
+                  sx={{ borderColor: "secondary.main" }}
+                />
+                <Link
+                  variant="body2"
+                  color="secondary"
+                  href="/legal/terms-and-use"
+                  component={NextLink}
+                >
+                  Terms and use
+                </Link>
+              </>
             </Stack>
           </Stack>
         </Container>
