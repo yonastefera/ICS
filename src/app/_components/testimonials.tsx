@@ -17,7 +17,7 @@ export const Testimonials = () => {
   return (
     <>
       <Swiper loop>
-        {testimonials.map((t, index) => (
+        {testimonials.map((t) => (
             <SwiperSlide key={t.id}>
               <motion.div
                 variants={containerSync}
