@@ -12,7 +12,7 @@ import { ReactNode } from "react";
 const Page = () => {
   return (
     <>
-      <Container sx={{ my: 16 }}>
+      <Container sx={{ my: {xs: 8, md:16}  }}>
         <Typography>
           Thank you for choosing Icreativv Consulting and Service (&quot;Icreativv,&quot;
           &quot;we,&quot; &quot;us,&quot; or &quot;our&quot;). This Privacy Statement outlines our practices

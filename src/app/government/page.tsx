@@ -45,7 +45,7 @@ const codes = [
 const Page = () => {
   return (
     <>
-      <Container sx={{ my: 16 }}>
+      <Container sx={{ my: {xs: 8, md:16}  }}>
         <Grid container spacing={4}>
           <Grid
             size={{ xs: 12, md: 6 }}
@@ -108,7 +108,7 @@ const Page = () => {
         </Grid>
       </Container>
 
-      <Container sx={{ my: 16, position: "relative" }}>
+      <Container sx={{ my: {xs: 8, md:16} , position: "relative" }}>
         <Card
           sx={{
             p: 2,
@@ -165,7 +165,7 @@ const Page = () => {
         </Card>
       </Container>
 
-      <Box sx={{ bgcolor: "tertiary.main", my: 16, py: 8 }}>
+      <Box sx={{ bgcolor: "tertiary.main", my: {xs: 8, md:16} , py: 8 }}>
         <Container>
           <Typography
             variant="h3"
@@ -197,7 +197,7 @@ const Page = () => {
         </Container>
       </Box>
 
-      <Box sx={{ my: 16, py: 5, position: "relative" }}>
+      <Box sx={{ my: {xs: 8, md:16} , py: 5, position: "relative" }}>
         <Container maxWidth="md">
           <Stack direction="column" alignItems={"center"}>
             <Typography
@@ -235,7 +235,7 @@ const Page = () => {
         </Container>
       </Box>
 
-      <Container sx={{ my: 16 }}>
+      <Container sx={{ my: {xs: 8, md:16}  }}>
         <Typography
           variant="h3"
           gutterBottom

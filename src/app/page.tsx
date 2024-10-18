@@ -32,7 +32,7 @@ import { ServiceCarousel } from "./_components/service-carousel";
 export default function Home() {
   return (
     <main>
-      <Container sx={{ my: 16, overflow: "hidden" }}>
+      <Container sx={{ my: {xs: 8, md:16} , overflow: "hidden" }}>
         <motion.div
           variants={containerSync}
           initial="hidden"
@@ -117,7 +117,7 @@ export default function Home() {
         </motion.div>
       </Container>
 
-      <Container sx={{ my: 16 }}>
+      <Container sx={{ my: {xs: 8, md:16}  }}>
         <Chip label=" WHAT WE OFFER" variant="outlined" color="primary" />
 
         <Stack
@@ -163,7 +163,7 @@ export default function Home() {
         </motion.div>
       </Container>
 
-      <Container sx={{ my: 16 }}>
+      <Container sx={{ my: {xs: 8, md:16}  }}>
         <motion.div
           variants={container}
           initial={"hidden"}
@@ -244,7 +244,7 @@ export default function Home() {
         </motion.div>
       </Container>
 
-      <Box sx={{ bgcolor: "primary.dark", py: 6, my: 16 }}>
+      <Box sx={{ bgcolor: "primary.dark", py: 6, my: {xs: 8, md:16}  }}>
         <motion.div
           variants={container}
           initial="hidden"

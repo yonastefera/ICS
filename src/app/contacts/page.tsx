@@ -12,7 +12,7 @@ import { Location } from "./_components/location";
 const Page = () => {
   return (
     <>
-      <Container sx={{ my: 16 }}>
+      <Container sx={{ my: {xs: 8, md:16}  }}>
         <Chip label="GET IN TOUCH" variant="outlined" color="primary" />
 
         <Grid container spacing={2} mt={3}>
@@ -55,7 +55,7 @@ const Page = () => {
         </Grid>
       </Container>
 
-      <Container sx={{ my: 16 }}>
+      <Container sx={{ my: {xs: 8, md:16}  }}>
         <Grid container spacing={4}>
           <Grid size={{ xs: 12, md: 6 }}>
             <Location />

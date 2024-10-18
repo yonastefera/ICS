@@ -22,7 +22,7 @@ import { FramedImage } from "../_components/framed-image";
 const Page = () => {
   return (
     <main>
-      <Container sx={{ my: 16 }}>
+      <Container sx={{ my: {xs: 8, md:16}  }}>
         <Grid container spacing={4}>
           <Grid size={{ xs: 12, md: 6 }}>
             <Box
@@ -87,7 +87,7 @@ const Page = () => {
         </Grid>
       </Container>
 
-      <Container sx={{ my: 16 }}>
+      <Container sx={{ my: {xs: 8, md:16}  }}>
         <Grid container spacing={4}>
           <Grid size={{ xs: 12, md: 6 }} order={{ xs: 1, md: 2 }}>
             <Box
@@ -136,7 +136,7 @@ const Page = () => {
         </Grid>
       </Container>
 
-      <Container sx={{ my: 16 }}>
+      <Container sx={{ my: {xs: 8, md:16}  }}>
         <Grid container spacing={4}>
           <Grid size={{ xs: 12, md: 6 }}>
             <Box
@@ -229,7 +229,7 @@ const Page = () => {
         </Grid>
       </Container>
 
-      <Container sx={{ my: 16 }}>
+      <Container sx={{ my: {xs: 8, md:16}  }}>
         <Chip label="OUR EXPERTS" variant="outlined" color="primary" />
         <Typography
           variant="h3"

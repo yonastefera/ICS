@@ -38,7 +38,7 @@ function Footer() {
             backgroundPosition: "center",
             position: "relative",
             py: 6,
-            my: 16,
+            my: {xs: 8, md:16} ,
           }}
         >
           <Box
@@ -56,7 +56,7 @@ function Footer() {
       )}
 
       {!pathName.startsWith("/legal") && (
-        <Container sx={{ my: 16 }}>
+        <Container sx={{ my: {xs: 8, md:16}  }}>
           <Link
             component={NextLink}
             href="/contacts#form"
@@ -70,6 +70,7 @@ function Footer() {
                 borderBottom: (theme) =>
                   `1px solid ${theme.palette.primary.main}`,
                 display: "inline-flex",
+                my: 0
               }}
               gap={2}
             >
