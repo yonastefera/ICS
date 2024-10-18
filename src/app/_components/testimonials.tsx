@@ -9,6 +9,7 @@ import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import { motion } from "framer-motion";
 import { containerSync, slideLeft, slideRight } from "@/animation";
+import testimonials from "@/data/testimonials-data.json"
 
 export const Testimonials = () => {
   const theme = useTheme();
@@ -16,10 +17,8 @@ export const Testimonials = () => {
   return (
     <>
       <Swiper loop>
-        {Array(5)
-          .fill(0)
-          .map((_, index) => (
-            <SwiperSlide key={index}>
+        {testimonials.map((t, index) => (
+            <SwiperSlide key={t.id}>
               <motion.div
                 variants={containerSync}
                 initial="hidden"
@@ -41,13 +40,13 @@ export const Testimonials = () => {
                       variants={slideRight}
                     >
                       <Image
-                        src="/images/discussion.jpeg"
+                        src={t.image}
                         fill
                         sizes={`${theme.breakpoints.down(
                           "sm"
                         )} 100vw, ${theme.breakpoints.up("sm")} 520`}
                         style={{ objectFit: "cover" }}
-                        alt="logo"
+                        alt={t.imageAlt}
                       />
                     </motion.div>
                   </Grid>
@@ -64,21 +63,15 @@ export const Testimonials = () => {
                   >
                     <motion.div variants={slideLeft}>
                       <FormatQuoteIcon sx={{ fontSize: 72 }} color="primary" />
-                      <Typography fontWeight={700} mt={3} mb={4}>
-                        Lorem ipsum dolor sit amet consectetur. Egestas sit
-                        tincidunt amet interdum nunc ac et egestas augue. Tellus
-                        cursus a blandit cum ultrices quam imperdiet pulvinar
-                        adipiscing. Tincidunt proin nunc gravida vitae id
-                        posuere at massa erat. Sit sem consectetur elit turpis
-                        vitae amet dolor blandit. Ultrices ut nullam cursus nisi
-                        sagittis neque{" "}
+                      <Typography fontWeight={600} mt={3} mb={4}>
+                        {t.content}
                       </Typography>
 
-                      <Typography variant="body2" gutterBottom>
-                        John Doe
+                      <Typography color="primary" fontWeight={700} gutterBottom>
+                        {t.userName}
                       </Typography>
-                      <Typography color="primary" fontWeight={700}>
-                        John Doe
+                      <Typography variant="body2" >
+                        {t.title}
                       </Typography>
                     </motion.div>
                   </Grid>
@@ -101,7 +94,7 @@ const Arrow = ({ forward }: { forward?: boolean }) => {
 
   return (
     <>
-      <IconButton type="button" aria-label={forward ? "Next" : "Previous"}>
+      <IconButton type="button" aria-label={forward ? "Next testimonial" : "Previous testimonial"}>
         {!forward ? (
           <ChevronLeftIcon
             color="primary"

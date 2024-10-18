@@ -1,0 +1,27 @@
+[
+    {
+        "id":"testimonial_1",
+        "content": "Icreativv Consulting provided top-tier service throughout our project. Their team’s expertise, dedication, and innovative approach exceeded expectations. They solved complex challenges efficiently, delivering on time and within budget.",
+        "userName": "Sarah T",
+        "title": "CEO",
+        "image": "/images/business.jpg",
+        "imageAlt": "Sarah T smiling"
+    },
+    {
+        "id":"testimonial_2",
+        "content": "Working with Icreativv was a fantastic experience! Their professionalism, clear communication, and problem-solving skills made the process seamless, driving tangible business results.",
+        "userName": "Michael R.",
+        "title": "CEO",
+        "image": "/images/government-clients.jpg",
+        "imageAlt": "Micheal and Yonas exchanging a handshake"
+    },
+    {
+        "id":"testimonial_3",
+        "content": "Icreativv brought our vision to life. From concept to completion, they ensured every step was smooth and aligned perfectly with our needs. Highly recommend!",
+        "userName": "Emily W.",
+        "title": "CEO",
+        "image": "/images/teams.jpg",
+        "imageAlt": "Emily and ICS team"
+    }
+
+]
