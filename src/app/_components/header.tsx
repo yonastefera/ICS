@@ -133,9 +133,9 @@ export const Header = () => {
               borderBottomStyle: "solid",
             }}
           >
-            <Typography variant="h5" fontWeight={700}>
+            <Link component={NextLink} variant="h5" fontWeight={700} href="/">
               ICS
-            </Typography>
+            </Link>
             <IconButton onClick={() => setMenuShown(false)} type="button"
                   aria-label="Close menu">
               <CloseIcon />

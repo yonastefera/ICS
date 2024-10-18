@@ -49,7 +49,7 @@ export default function Home() {
                   placeItems: "center",
                 }}
               >
-                <FramedImage src="/images/discussion.jpeg" alt="ICS employees" />
+                <FramedImage src="/images/business.jpg" alt="business and technology" />
               </motion.div>
             </Grid>
 

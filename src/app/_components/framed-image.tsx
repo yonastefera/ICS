@@ -17,7 +17,7 @@ export const FramedImage: React.FC<{ src: string, alt: string, priority?: boolea
         maxWidth: "460px",
       }}
     >
-      <Box sx={{ bgcolor: "red", inset: 28, position: "absolute" }}>
+      <Box sx={{ inset: 28, position: "absolute" }}>
         <Image
           src={src}
           fill

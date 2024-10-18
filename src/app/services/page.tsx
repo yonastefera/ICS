@@ -35,7 +35,6 @@ const PageContent: React.FC = () => {
           position: "relative",
           clipPath: {
             md: "polygon(0 0, 75% 0%, 85% 100%, 0% 100%)",
-            xs: "polygon(0 0, 87% 0%, 95% 100%, 0% 100%)",
           },
           py: 3,
           mt: 16,
