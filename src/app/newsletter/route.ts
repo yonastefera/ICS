@@ -74,6 +74,7 @@ export async function POST(request: Request) {
     const col = await db.collection("newsletter");
 
     const existingSubscription = await col.findOne({ email });
+
     if (!existingSubscription) {
       await col.insertOne({
         email,

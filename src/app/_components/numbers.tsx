@@ -13,6 +13,7 @@ export const Numbers = () => {
   const teamRounded = useTransform(teams, Math.round);
 
   useEffect(() => {
+     // eslint-disable-next-line react-hooks/exhaustive-deps
     animate(experience, 10, { duration: 1 });
     animate(projects, 50, { duration: 1 });
     animate(teams, 20, { duration: 1 });
