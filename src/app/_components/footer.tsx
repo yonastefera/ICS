@@ -27,6 +27,8 @@ function Footer() {
   const pages = [...headerLinks, { label: "Contact Us", href: "/contacts" }];
   const pathName = usePathname();
 
+  const currentYear = new Date().getFullYear();
+
   return (
     <footer>
       {!pathName.startsWith("/legal") && (
@@ -267,7 +269,7 @@ function Footer() {
             sx={{ alignItems: "center" }}
           >
             <Typography color="secondary" variant="body2">
-              Copyright © 2024 All rights reserved.
+              Copyright © {currentYear} All rights reserved.
             </Typography>
 
             <Stack spacing={2}>
