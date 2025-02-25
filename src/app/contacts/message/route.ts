@@ -79,7 +79,7 @@ const contactTemplate = () =>  `
 `;
 
 export async function POST(request: Request) {
-  const { fullName, email, subject, note} = await request.json();
+  const { fullName, email, subject, note } = await request.json();
 
   try {
     await client.connect();

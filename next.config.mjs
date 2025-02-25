@@ -1,4 +1,8 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+const nextConfig = {
+    env: {
+        MONGODB: process.env.MONGODB,
+      },
+};
 
 export default nextConfig;
