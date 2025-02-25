@@ -307,8 +307,6 @@ export const Location = () => {
               },
             ]}
           ></Map>
-
-          {/* <Image src="/images/map.png" fill alt="ICS location" /> */}
         </Box>
       </APIProvider>
     </>

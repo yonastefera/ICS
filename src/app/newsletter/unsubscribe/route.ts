@@ -2,7 +2,13 @@ import { NextRequest } from "next/server";
 import { redirect } from "next/navigation";
 import { MongoClient } from "mongodb";
 
-const client = new MongoClient(process.env.MONGODB!);
+const mongoUri = process.env.MONGODB;
+
+if (!mongoUri) {
+  throw new Error("❌ MONGODB environment variable is not set.");
+}
+
+const client = new MongoClient(mongoUri);
 
 export const GET = async (request: NextRequest) => {
   const unsubscribeToken = request.nextUrl.searchParams.get("key");

@@ -9,13 +9,13 @@ if (!mongoUri) {
 
 const client = new MongoClient(mongoUri);
 
-const emailTemplate = (subscriptionKey: string) =>  `
+const contactTemplate = () =>  `
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thank You for Subscribing!</title>
+    <title>Contact Form Submission Received!</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -53,48 +53,57 @@ const emailTemplate = (subscriptionKey: string) =>  `
 </head>
 <body>
     <div class="container">
-        <h1>Welcome and Thank You for Subscribing!</h1>
-        <p>Dear,</p>
-        <p>Thank you for subscribing to our newsletter! We’re excited to have you on board and look forward to sharing the latest updates, news, and exclusive offers with you.</p>
+        <h1>Contact Form Submission Received</h1>
+        <p>Dear <strong>{{fullname}}</strong>,</p>
+        
+        <p>Thank you for reaching out to us. We have received your message and will get back to you as soon as possible.</p>
 
+        <h3>Contact Details:</h3>
+        <ul>
+            <li><strong>Email:</strong> {{email}}</li>
+            <li><strong>Subject:</strong> {{subject}}</li>
+            <li><strong>Message:</strong> {{note}}</li>
+        </ul>
 
-        <p>Thank you once again for joining us!</p>
+        <p>We appreciate your inquiry and will respond shortly. If your matter is urgent, please contact us directly via +1(818)280-9198.</p>
 
         <p>Best regards,<br>Yonas Tefera<br>CEO<br>ICS</p>
+
         <div class="footer">
-        <a href="http://localhost:3000/newsletter/unsubscribe?key=${subscriptionKey}">Unsubscribe</a> |
-        <a href="http://localhost:3000/legal/privacy-policy">Privacy Statement</a>
-            <p>1165 Springwood Connector , Atlanta, GA 30328 USA | <a href="https://icreativv.com/">https://icreativv.com/</a></p>
+            <a href="http://localhost:3000/legal/privacy-policy">Privacy Statement</a>
+            <p>1165 Springwood Connector, Atlanta, GA 30328 USA | <a href="https://icreativv.com/">https://icreativv.com/</a></p>
         </div>
-    </div>
+        </div>
 </body>
 </html>
 `;
 
 export async function POST(request: Request) {
-  const { email } = await request.json();
+  const { fullName, email, subject, note} = await request.json();
 
   try {
     await client.connect();
     const db = await client.db("iccs_next");
-    const col = await db.collection("newsletter");
+    const col = await db.collection("contacts");
 
-    const existingSubscription = await col.findOne({ email });
+    const existingContact = await col.findOne({ fullName, email, subject, note });
 
-    const subscription = {
+    const contact = {
+      fullName,
       email,
-      unsubscribeToken: crypto.randomUUID(), 
+      subject,
+      note,
       createdAt: new Date(),
     };
 
-    if (!existingSubscription) {
-      await col.insertOne(subscription);
+    if (!existingContact) {
+      await col.insertOne(contact);
     }
 
     await transporter.sendMail({
-      subject: "Thank You for Subscribing!",
+      subject: "Thank You for your chat!",
       to: email,
-      html: emailTemplate(subscription.unsubscribeToken),
+      html: contactTemplate(),
     });
   } catch (error) {
     console.error(error);

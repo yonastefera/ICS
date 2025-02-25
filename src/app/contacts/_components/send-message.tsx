@@ -40,7 +40,7 @@ export const SendMessage = () => {
     initialValues: { fullName: "", email: "", subject: "", note: "" },
     onSubmit: async (value, { resetForm }) => {
       try {
-        const response = await fetch("/api/message", {
+        const response = await fetch("/contacts/message", {
           method: "POST",
           body: JSON.stringify(value),
         });

@@ -1,6 +1,6 @@
 import { Message } from "@/app/contacts/_components/send-message";
 import { NextRequest, NextResponse } from "next/server";
-import { transporter } from "../email";
+import { transporter } from "./email";
 
 const template = (fullName: string) => `
 <!DOCTYPE html>
