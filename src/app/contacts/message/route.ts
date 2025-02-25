@@ -9,7 +9,7 @@ if (!mongoUri) {
 
 const client = new MongoClient(mongoUri);
 
-const contactTemplate = () =>  `
+const contactTemplate = (fullName: string) =>  `
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -54,23 +54,16 @@ const contactTemplate = () =>  `
 <body>
     <div class="container">
         <h1>Contact Form Submission Received</h1>
-        <p>Dear <strong>{{fullname}}</strong>,</p>
+        <p>Dear <strong>${fullName}</strong>,</p>
         
         <p>Thank you for reaching out to us. We have received your message and will get back to you as soon as possible.</p>
-
-        <h3>Contact Details:</h3>
-        <ul>
-            <li><strong>Email:</strong> {{email}}</li>
-            <li><strong>Subject:</strong> {{subject}}</li>
-            <li><strong>Message:</strong> {{note}}</li>
-        </ul>
 
         <p>We appreciate your inquiry and will respond shortly. If your matter is urgent, please contact us directly via +1(818)280-9198.</p>
 
         <p>Best regards,<br>Yonas Tefera<br>CEO<br>ICS</p>
 
         <div class="footer">
-            <a href="http://localhost:3000/legal/privacy-policy">Privacy Statement</a>
+            <a href="https://icreativv.com/legal/privacy-policy">Privacy Statement</a>
             <p>1165 Springwood Connector, Atlanta, GA 30328 USA | <a href="https://icreativv.com/">https://icreativv.com/</a></p>
         </div>
         </div>
@@ -103,7 +96,7 @@ export async function POST(request: Request) {
     await transporter.sendMail({
       subject: "Thank You for your chat!",
       to: email,
-      html: contactTemplate(),
+      html: contactTemplate(fullName),
     });
   } catch (error) {
     console.error(error);
