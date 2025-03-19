@@ -13,10 +13,10 @@ export const InfoCard = ({
       sx={{ bgcolor: "tertiary.main", height: "100%", borderRadius: 2, p: 1.5 }}
     >
       <CardContent>
-        <Typography sx={{ fontWeight: 700 }} color="textSecondary">
+        <Typography sx={{ fontWeight: 700 }} color="secondary">
           {primary}
         </Typography>
-        <Typography variant="body2" color="textSecondary" mt={1.5}>
+        <Typography variant="body2" color="secondary" mt={1.5}>
           {secondary}
         </Typography>
       </CardContent>

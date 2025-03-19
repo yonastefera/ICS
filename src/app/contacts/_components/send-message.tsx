@@ -72,7 +72,7 @@ export const SendMessage = () => {
         <Typography
           variant="h4"
           fontWeight="700"
-          color="textSecondary"
+          color="secondary"
           fontFamily={'"Barlow Condensed", sans-serif'}
           component={'h1'}
         >
@@ -88,11 +88,11 @@ export const SendMessage = () => {
               onBlur={handleBlur}
               onChange={handleChange}
               value={values.fullName}
-              sx={{
-                input: {
-                  color: "white",
-                },
-              }}
+              // sx={{
+              //   input: {
+              //     color: "white",
+              //   },
+              // }}
               error={touched.fullName && !!errors.fullName}
               helperText={touched.fullName ? errors.fullName : undefined}
             />

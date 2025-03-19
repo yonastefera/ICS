@@ -1,4 +1,4 @@
-"use client";
+'use client'
 
 import {
   Box,
@@ -11,59 +11,63 @@ import {
   ListItemText,
   Stack,
   Typography,
-} from "@mui/material";
-import ArrowOutwardIcon from "@mui/icons-material/ArrowOutward";
-import Grid from "@mui/material/Grid2";
-import SquareIcon from "@mui/icons-material/Square";
-import { Testimonials } from "./_components/testimonials";
-import NextLink from "next/link";
+} from '@mui/material'
+import ArrowOutwardIcon from '@mui/icons-material/ArrowOutward'
+import Grid from '@mui/material/Grid2'
+import SquareIcon from '@mui/icons-material/Square'
+import { Testimonials } from './_components/testimonials'
+import NextLink from 'next/link'
 import {
   container,
   containerSync,
   opacity,
   slideLeft,
   slideRight,
-} from "@/animation";
-import { motion } from "framer-motion";
-import { Numbers } from "./_components/numbers";
-import { FramedImage } from "./_components/framed-image";
-import { ServiceCarousel } from "./_components/service-carousel";
+} from '@/animation'
+import { motion } from 'framer-motion'
+import { Numbers } from './_components/numbers'
+import { FramedImage } from './_components/framed-image'
+import { ServiceCarousel } from './_components/service-carousel'
 
 export default function Home() {
   return (
     <main>
-      <Container sx={{ my: {xs: 8, md:16} , overflow: "hidden" }}>
+      <Container sx={{ my: { xs: 8, md: 16 }, overflow: 'hidden' }}>
         <motion.div
           variants={containerSync}
           initial="hidden"
-          whileInView={"shown"}
+          whileInView={'shown'}
         >
           <Grid container spacing={4}>
             <Grid size={{ xs: 12, md: 6 }}>
               <motion.div
                 variants={slideRight}
                 style={{
-                  width: "100%",
-                  height: "100%",
-                  display: "grid",
-                  placeItems: "center",
+                  width: '100%',
+                  height: '100%',
+                  display: 'grid',
+                  placeItems: 'center',
                 }}
               >
-                <FramedImage src="/images/business.jpg" alt="business and technology" />
+                <FramedImage
+                  src="/images/business.jpg"
+                  alt="business and technology"
+                />
               </motion.div>
             </Grid>
 
             <Grid size={{ xs: 12, md: 6 }}>
               <motion.div
                 style={{
-                  width: "100%",
-                  height: " 100%",
-                  display: "grid",
-                  placeItems: "center",
+                  width: '100%',
+                  height: ' 100%',
+                  display: 'grid',
+                  placeItems: 'center',
                 }}
                 variants={slideLeft}
               >
                 <Box>
+           
                   <Chip
                     label="ABOUT COMPANY"
                     variant="outlined"
@@ -97,7 +101,7 @@ export default function Home() {
                   <Stack
                     gap={4}
                     sx={{ mt: 4, mb: 6 }}
-                    direction={{ xs: "column", sm: "row" }}
+                    direction={{ xs: 'column', sm: 'row' }}
                   >
                     <Numbers />
                   </Stack>
@@ -117,16 +121,16 @@ export default function Home() {
         </motion.div>
       </Container>
 
-      <Container sx={{ my: {xs: 8, md:16}  }}>
+      <Container sx={{ my: { xs: 8, md: 16 } }}>
         <Chip label=" WHAT WE OFFER" variant="outlined" color="primary" />
 
         <Stack
-          justifyContent={"space-between"}
+          justifyContent={'space-between'}
           gap={3}
-          alignItems={"start"}
-          direction={{ xs: "column", md: "row" }}
+          alignItems={'start'}
+          direction={{ xs: 'column', md: 'row' }}
         >
-          <Box sx={{ maxWidth: "md" }}>
+          <Box sx={{ maxWidth: 'md' }}>
             <Typography
               variant="h3"
               gutterBottom
@@ -154,7 +158,7 @@ export default function Home() {
             component={NextLink}
             href="/services"
           >
-            View all services{" "}
+            View all services{' '}
           </Button>
         </Stack>
 
@@ -163,11 +167,11 @@ export default function Home() {
         </motion.div>
       </Container>
 
-      <Container sx={{ my: {xs: 8, md:16}  }}>
+      <Container sx={{ my: { xs: 8, md: 16 } }}>
         <motion.div
           variants={container}
-          initial={"hidden"}
-          whileInView={"shown"}
+          initial={'hidden'}
+          whileInView={'shown'}
         >
           <Box sx={{ maxWidth: 950 }}>
             <Chip label="ABOUT COMPANY" variant="outlined" color="primary" />
@@ -202,11 +206,11 @@ export default function Home() {
             </motion.div>
 
             <motion.div variants={opacity}>
-              <Stack direction={{ xs: "column", sm: "row" }}>
+              <Stack direction={{ xs: 'column', sm: 'row' }}>
                 <List
                   sx={{
-                    display: "grid",
-                    gridTemplateColumns: { xs: "1fr", md: "repeat(2, 1fr)" },
+                    display: 'grid',
+                    gridTemplateColumns: { xs: '1fr', md: 'repeat(2, 1fr)' },
                     gap: 1,
                   }}
                 >
@@ -244,23 +248,23 @@ export default function Home() {
         </motion.div>
       </Container>
 
-      <Box sx={{ bgcolor: "primary.dark", py: 6, my: {xs: 8, md:16}  }}>
+      <Box sx={{ bgcolor: 'primary.dark', py: 6, my: { xs: 8, md: 16 } }}>
         <motion.div
           variants={container}
           initial="hidden"
-          whileInView={"shown"}
+          whileInView={'shown'}
           viewport={{ amount: 0.75 }}
         >
           <Container>
-            <Stack direction={"column"} alignItems={"center"}>
+            <Stack direction={'column'} alignItems={'center'}>
               <motion.div variants={opacity}>
                 <Typography
                   variant="h3"
                   gutterBottom
                   fontFamily={'"Barlow Condensed", sans-serif'}
                   fontWeight="bold"
-                  color="textSecondary"
-                  textAlign={"center"}
+                  color="secondary"
+                  textAlign={'center'}
                   component={'h2'}
                 >
                   Elevate your Projects with ICS
@@ -271,7 +275,7 @@ export default function Home() {
                 <Typography
                   gutterBottom
                   color="secondary"
-                  textAlign={"center"}
+                  textAlign={'center'}
                   maxWidth="md"
                 >
                   Our comprehensive capabilities span the entire IT spectrum,
@@ -286,7 +290,7 @@ export default function Home() {
               </motion.div>
 
               <motion.div variants={opacity}>
-                <Typography color="secondary" maxWidth="md" mt={2} mb={4}>
+                <Typography color="secondary" maxWidth="md" mt={2} mb={4} textAlign={'center'}>
                   Explore our proven track record and credentials by downloading
                   our capability statement, which highlights our past clients
                   and government certifications.
@@ -297,8 +301,8 @@ export default function Home() {
                 <Button
                   variant="contained"
                   size="large"
-                  sx={{ textTransform: "Capitalize" }}
-                  component={"a"}
+                  sx={{ textTransform: 'Capitalize' }}
+                  component={'a'}
                   href="/file/Capability_Statement.pdf"
                   color="secondary"
                   disableElevation
@@ -328,5 +332,5 @@ export default function Home() {
         </Box>
       </Container>
     </main>
-  );
+  )
 }

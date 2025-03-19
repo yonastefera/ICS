@@ -46,7 +46,7 @@ const PageContent: React.FC = () => {
             variant="h3"
             fontFamily={'"Barlow Condensed", sans-serif'}
             fontWeight="bold"
-            color="textSecondary"
+            color="secondary"
             component={"h1"}
             sx={{ mt: 2 }}
           >

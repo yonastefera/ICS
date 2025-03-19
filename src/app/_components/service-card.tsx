@@ -45,7 +45,7 @@ export const ServiceCard: React.FC<{
             />
             <Box sx={{}}>
               <Typography
-                color="textSecondary"
+                color="secondary"
                 variant="h6"
                 component={'h3'}
                 fontWeight={700}
@@ -55,7 +55,7 @@ export const ServiceCard: React.FC<{
                 {title}
               </Typography>
               <Typography
-                color="textSecondary"
+                color="secondary"
                 variant="body2"
                 textAlign={"center"}
                 sx={{

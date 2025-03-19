@@ -17,14 +17,14 @@ export const ContactCard: React.FC<{
             <Typography
               fontWeight={700}
               gutterBottom
-              color="textSecondary"
+              color="secondary"
               textAlign={"center"}
             >
               {title}
             </Typography>
             <Typography
               variant="body2"
-              color="textSecondary"
+              color="secondary"
               textAlign={"center"}
               gutterBottom
             >
@@ -32,7 +32,7 @@ export const ContactCard: React.FC<{
             </Typography>
             <Typography
               variant="body2"
-              color="textSecondary"
+              color="secondary"
               textAlign={"center"}
             >
               {secondary}

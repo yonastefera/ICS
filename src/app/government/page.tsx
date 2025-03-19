@@ -172,7 +172,7 @@ const Page = () => {
             gutterBottom
             fontFamily={'"Barlow Condensed", sans-serif'}
             fontWeight="bold"
-            color="textSecondary"
+            color="secondary"
             component={"h2"}
           >
             Government Information

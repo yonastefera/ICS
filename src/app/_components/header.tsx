@@ -1,4 +1,4 @@
-"use client";
+'use client'
 
 import {
   AppBar,
@@ -18,31 +18,32 @@ import {
   alpha,
   useScrollTrigger,
   useTheme,
-} from "@mui/material";
-import ArrowOutwardIcon from "@mui/icons-material/ArrowOutward";
-import MenuIcon from "@mui/icons-material/Menu";
-import { useState } from "react";
-import NextLink from "next/link";
-import { usePathname } from "next/navigation";
-import CloseIcon from "@mui/icons-material/Close";
-import { motion } from "framer-motion";
-import { container, opacity } from "@/animation";
+} from '@mui/material'
+import ArrowOutwardIcon from '@mui/icons-material/ArrowOutward'
+import MenuIcon from '@mui/icons-material/Menu'
+import { useState } from 'react'
+import NextLink from 'next/link'
+import { usePathname } from 'next/navigation'
+import CloseIcon from '@mui/icons-material/Close'
+import { motion } from 'framer-motion'
+import { container, opacity } from '@/animation'
 
 export const headerLinks = [
-  { label: "About Us", href: "/about-us" },
-  { label: "Services", href: "/services" },
-  { label: "Government", href: "/government" },
-];
+  { label: 'About Us', href: '/about-us' },
+  { label: 'Services', href: '/services' },
+  { label: 'Government', href: '/government' },
+  { label: 'Outsourcing', href: '/outsourcing' },
+]
 
 export const Header = () => {
-  const theme = useTheme();
-  const pathName = usePathname();
+  const theme = useTheme()
+  const pathName = usePathname()
 
-  const [menuShown, setMenuShown] = useState(false);
-  const trigger = useScrollTrigger({ disableHysteresis: true });
+  const [menuShown, setMenuShown] = useState(false)
+  const trigger = useScrollTrigger({ disableHysteresis: true })
 
-  const isOnLandingPage = pathName === "/";
-  const bgColor = alpha(theme.palette.tertiary.main, 0.95);
+  const isOnLandingPage = pathName === '/'
+  const bgColor = alpha(theme.palette.tertiary.main, 0.95)
 
   return (
     <>
@@ -54,15 +55,16 @@ export const Header = () => {
             bgcolor: !isOnLandingPage
               ? bgColor
               : !trigger
-              ? "transparent"
+              ? 'transparent'
               : bgColor,
+            height: 74,
           }}
         >
-          <Container sx={{ position: "relative" }}>
+          <Container sx={{ position: 'relative' }}>
             <Toolbar
               sx={{
-                bgcolor: "transparent",
-                justifyContent: "space-between",
+                bgcolor: 'transparent',
+                justifyContent: 'space-between',
                 px: { xs: 0 },
                 py: { xs: 2 },
               }}
@@ -77,17 +79,17 @@ export const Header = () => {
                 ICS
               </Link>
 
-              <Stack alignItems={"center"} gap={3}>
-                <Stack gap={2.5} display={{ xs: "none", md: "flex" }}>
+              <Stack alignItems={'center'} gap={3}>
+                <Stack gap={2.5} display={{ xs: 'none', md: 'flex' }}>
                   {headerLinks.map((link) => (
                     <Button
                       variant="text"
                       key={`desktop-${link.href}`}
                       component={NextLink}
                       href={link.href}
-                      color={pathName === link.href ? "warning" : "secondary"}
+                      color={pathName === link.href ? 'warning' : 'secondary'}
                       sx={{
-                        fontWeight: pathName === link.href ? "bold" : "normal",
+                        fontWeight: pathName === link.href ? 'bold' : 'normal',
                       }}
                     >
                       {link.label}
@@ -97,18 +99,18 @@ export const Header = () => {
 
                 <Button
                   variant="outlined"
-                  color={pathName != "/contacts" ? "secondary" : "warning"}
+                  color={pathName != '/contacts' ? 'secondary' : 'warning'}
                   size="large"
                   LinkComponent={NextLink}
-                  href={"/contacts"}
-                  sx={{ display: { xs: "none", md: "initial" } }}
+                  href={'/contacts'}
+                  sx={{ display: { xs: 'none', md: 'initial' } }}
                 >
                   Get in touch
                 </Button>
 
                 <IconButton
                   color="secondary"
-                  sx={{ display: { md: "none" } }}
+                  sx={{ display: { md: 'none' } }}
                   onClick={() => setMenuShown(() => true)}
                   type="button"
                   aria-label="Open menu"
@@ -127,23 +129,26 @@ export const Header = () => {
         >
           <Toolbar
             sx={{
-              justifyContent: "space-between",
+              justifyContent: 'space-between',
               borderBottomWidth: 1,
-              borderBottomColor: "divider",
-              borderBottomStyle: "solid",
+              borderBottomColor: 'divider',
+              borderBottomStyle: 'solid',
             }}
           >
             <Link component={NextLink} variant="h5" fontWeight={700} href="/">
               ICS
             </Link>
-            <IconButton onClick={() => setMenuShown(false)} type="button"
-                  aria-label="Close menu">
+            <IconButton
+              onClick={() => setMenuShown(false)}
+              type="button"
+              aria-label="Close menu"
+            >
               <CloseIcon />
             </IconButton>
           </Toolbar>
-          <Box sx={{ width: "auto", my: 2 }}>
+          <Box sx={{ width: 'auto', my: 2 }}>
             <List>
-              {[...headerLinks, { label: "Contact Us", href: "/contacts" }].map(
+              {[...headerLinks, { label: 'Contact Us', href: '/contacts' }].map(
                 (link) => (
                   <ListItem key={link.label} disablePadding>
                     <ListItemButton
@@ -154,7 +159,7 @@ export const Header = () => {
                       <ListItemText
                         primaryTypographyProps={{
                           color:
-                            link.href == pathName ? "primary" : "textPrimary",
+                            link.href == pathName ? 'primary' : 'textPrimary',
                           fontWeight: link.href == pathName ? 700 : 400,
                         }}
                       >
@@ -169,23 +174,23 @@ export const Header = () => {
         </Drawer>
       </Container>
 
-      {pathName === "/" && <Hero />}
+      {pathName === '/' && <Hero />}
     </>
-  );
-};
+  )
+}
 
 export const Hero = () => {
   return (
     <Box
       sx={{
-        bgcolor: "black",
-        backgroundImage: "url(/images/hero-bg.jpeg)",
-        backgroundSize: "cover",
-        backgroundPosition: "center right",
-        pt: "96px",
-        minHeight: "100vh",
-        position: "relative",
-        overflow: "hidden",
+        bgcolor: 'black',
+        backgroundImage: 'url(/images/hero-bg.jpeg)',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center right',
+        pt: '96px',
+        minHeight: '100vh',
+        position: 'relative',
+        overflow: 'hidden',
       }}
     >
       {/* <video
@@ -204,31 +209,31 @@ export const Hero = () => {
         <source src="/bg.mp4" type="video/mp4" />
       </video> */}
       <Box
-        sx={{ bgcolor: "rgba(0,0,0,0.35)", position: "absolute", inset: 0 }}
+        sx={{ bgcolor: 'rgba(0,0,0,0.35)', position: 'absolute', inset: 0 }}
       />
-      <Container sx={{ position: "relative" }}>
+      <Container sx={{ position: 'relative' }}>
         <motion.div variants={container} initial="hidden" whileInView="shown">
-          <Box sx={{ maxWidth: "sm", py: 12 }}>
+          <Box sx={{ maxWidth: 'sm', py: 12 }}>
             <motion.div variants={opacity}>
               <Typography
                 color="secondary"
                 variant="h2"
-                component={"h1"}
+                component={'h1'}
                 fontWeight={700}
                 lineHeight={1.2}
-                fontSize={{ xs: "10vw", sm: "6.5vw", md: "4.5vw" }}
+                fontSize={{ xs: '10vw', sm: '6.5vw', md: '4.5vw' }}
               >
-                Transforming Business with{" "}
+                Transforming Business with{' '}
                 <Typography
                   color="primary"
-                  component={"span"}
+                  component={'span'}
                   variant="h2"
                   fontWeight={700}
                   lineHeight={1.2}
-                  fontSize={{ xs: "10vw", sm: "6.5vw", md: "4.5vw" }}
+                  fontSize={{ xs: '10vw', sm: '6.5vw', md: '4.5vw' }}
                 >
                   Technology
-                </Typography>{" "}
+                </Typography>{' '}
               </Typography>
             </motion.div>
             <motion.div variants={opacity}>
@@ -247,7 +252,7 @@ export const Hero = () => {
                 size="large"
                 LinkComponent={NextLink}
                 sx={{ borderRadius: 1000 }}
-                href={"/services"}
+                href={'/services'}
               >
                 Explore More
               </Button>
@@ -256,5 +261,5 @@ export const Hero = () => {
         </motion.div>
       </Container>
     </Box>
-  );
-};
+  )
+}

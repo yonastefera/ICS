@@ -62,7 +62,7 @@ export const NewsLetter = () => {
       <Grid container spacing={4}>
         <Grid size={{ xs: 12, sm: 6 }}>
           <Typography
-            color="textSecondary"
+            color="secondary"
             gutterBottom
             fontFamily={'"Barlow Condensed", sans-serif'}
             fontWeight="bold"
@@ -70,7 +70,7 @@ export const NewsLetter = () => {
           >
             Newsletter
           </Typography>
-          <Typography color="textSecondary">
+          <Typography color="secondary">
             Sign up to get weekly newsletter to get the latest updates.
           </Typography>
         </Grid>
@@ -89,13 +89,10 @@ export const NewsLetter = () => {
                 onChange={handleChange}
                 helperText={touched.email ? errors.email : undefined}
                 error={touched.email && !!errors.email}
-                label="Email"
                 sx={{
                   width: "100%",
-                  color: "white",
-                  input: {
-                    color: "white",
-                  },
+                  // color: "white",
+     
                   ".MuiOutlinedInput-root": {
                     borderColor: "white",
                     borderRadius: 1000,

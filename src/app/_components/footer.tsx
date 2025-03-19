@@ -118,7 +118,7 @@ function Footer() {
               >
                 ICS
               </Link>
-              <Typography color="textSecondary" variant="body2" mt={3}>
+              <Typography color="secondary" variant="body2" mt={3}>
                 ICS thrives on innovation, consistently exploring and adopting
                 emerging technologies to stay ahead of the curve. We believe in
                 driving technological evolution that empowers businesses to
@@ -131,7 +131,7 @@ function Footer() {
                 <ListItemText
                   primary={
                     <Typography
-                      color="textSecondary"
+                      color="secondary"
                       variant="h6"
                       component={"h3"}
                     >
@@ -147,7 +147,7 @@ function Footer() {
                     <ListItemButton LinkComponent={NextLink} href={link.href}>
                       <ListItemText
                         primary={
-                          <Typography color="textSecondary" variant="body2">
+                          <Typography color="secondary" variant="body2">
                             {link.label}
                           </Typography>
                         }
@@ -163,7 +163,7 @@ function Footer() {
                 <ListItemText
                   primary={
                     <Typography
-                      color="textSecondary"
+                      color="secondary"
                       variant="h6"
                       component={"h3"}
                     >
@@ -183,7 +183,7 @@ function Footer() {
                     >
                       <ListItemText
                         primary={
-                          <Typography color="textSecondary" variant="body2">
+                          <Typography color="secondary" variant="body2">
                             {link.name}
                           </Typography>
                         }
@@ -199,7 +199,7 @@ function Footer() {
                 <ListItemText
                   primary={
                     <Typography
-                      color="textSecondary"
+                      color="secondary"
                       variant="h6"
                       component={"h3"}
                     >
@@ -220,7 +220,7 @@ function Footer() {
                     </ListItemIcon>
                     <ListItemText
                       primary={
-                        <Typography color="textSecondary" variant="body2">
+                        <Typography color="secondary" variant="body2">
                           mail@icreativv.com
                         </Typography>
                       }
@@ -235,7 +235,7 @@ function Footer() {
                     </ListItemIcon>
                     <ListItemText
                       primary={
-                        <Typography color="textSecondary" variant="body2">
+                        <Typography color="secondary" variant="body2">
                           +18182809198
                         </Typography>
                       }
@@ -250,7 +250,7 @@ function Footer() {
                     </ListItemIcon>
                     <ListItemText
                       primary={
-                        <Typography color="textSecondary" variant="body2">
+                        <Typography color="secondary" variant="body2">
                           1165 Springwood Connector, Atlanta GA 30328 USA
                         </Typography>
                       }
@@ -269,7 +269,7 @@ function Footer() {
             sx={{ alignItems: "center" }}
           >
             <Typography color="secondary" variant="body2">
-              Copyright © {currentYear} All rights reserved.
+              Copyright © {currentYear} All Rights Reserved.
             </Typography>
 
             <Stack spacing={2}>
@@ -296,6 +296,24 @@ function Footer() {
                 >
                   Terms and use
                 </Link>
+                
+              </>
+
+              <>
+                <Divider
+                  orientation="vertical"
+                  flexItem
+                  sx={{ borderColor: "secondary.main" }}
+                />
+                <Link
+                  variant="body2"
+                  color="secondary"
+                  href="/legal/terms-and-use"
+                  component={NextLink}
+                >
+                  Cookie Policy
+                </Link>
+                
               </>
             </Stack>
           </Stack>
