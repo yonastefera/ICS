@@ -5,48 +5,90 @@
       "icon": "/images/service-icons/software-engineering.png",
       "descriptions": [
         "At ICS, We take pride in our commitment to craftsmanship, combining cutting-edge technologies with proven methodologies to craft software solutions that are not just functional but also scalable, robust, and tailored to your unique needs.",
-        "n the realm of Software Engineering, we offer a comprehensive suite of services, including custom software development, application integration, and DevOps practices for streamlined operations. Our agile approach fosters adaptability and responsiveness, allowing us to rapidly iterate and refine solutions in line with your evolving requirements.",
+        "In the realm of Software Engineering, we offer a comprehensive suite of services, including custom software development, application integration, and DevOps practices for streamlined operations. Our agile approach fosters adaptability and responsiveness, allowing us to rapidly iterate and refine solutions in line with your evolving requirements.",
         "Our seasoned team of software engineers ensures a seamless and collaborative development process, leveraging their expertise to turn your ideas into reality."
       ],
       "details": [
         {
+          "image":"/images/about-us.jpg",
           "title": "Modernization & Transformation",
           "description":
             "Involves updating and enhancing existing systems to leverage contemporary technologies."
         },
         {
+          "image":"/images/about-us.jpg",
           "title": "Custom Software Development",
           "description":
             "Design and development of tailor-made software solutions."
         },
         {
+
+          "image":"/images/about-us.jpg",
           "title": "Requirements Analysis & Consulting",
           "description":
             "Collaboration with clients to analyze business requirements."
         },
         {
+          "image":"/images/about-us.jpg",
           "title": "Mobile App Development",
           "description":
             "Development of applications for mobile devices - iOS and Android platforms."
         },
         {
+          "image":"/images/about-us.jpg",
           "title": "Software Testing and Quality Assurance",
           "description":
             "Rigorous testing processes to identify and fix bugs."
         },
         {
+          "image":"/images/about-us.jpg",
           "title": "Database Design and Management",
           "description":
             "Design, implementation, and management of robust and scalable databases."
         },
         {
+          "image":"/images/about-us.jpg",
           "title": "Devops (CI/CD) / DevSecOps",
           "description": "Implementing DevOps practices and automation of software development, testing, and deployment."
         },
         {
+          "image":"/images/about-us.jpg",
           "title": "UI/UX Design",
           "description":
             "User interface (UI) and user experience (UX) design"
+        }
+      ],
+      "benefits": [
+        {
+          "image":"/images/service-icons/gear.svg",
+          "title": "Benefits of engineering services",
+          "description":
+            "We can assist you at any part of the engineering value chain and any lifecycle state."
+        },
+        {
+          "image":"/images/service-icons/collab.svg",
+          "title": "Effective collaboration",
+          "description":
+            "We can assist you at any part of the engineering value chain and any lifecycle state."
+        },
+        {
+
+          "image":"/images/service-icons/deliver.svg",
+          "title": "Flexible delivery",
+          "description":
+            "We can assist you at any part of the engineering value chain and any lifecycle state."
+        },
+        {
+          "image":"/images/service-icons/graph.svg",
+          "title": "Measurable outcomes",
+          "description":
+            "We can assist you at any part of the engineering value chain and any lifecycle state."
+        },
+        {
+          "image":"/images/service-icons/fast.svg",
+          "title": "Delivery management",
+          "description":
+            "We can assist you at any part of the engineering value chain and any lifecycle state."
         }
       ]
     },
@@ -99,6 +141,39 @@
           "description":
             "Offering 24/7 monitoring of your IT environment to detect and respond to threats in real-time, along with ongoing support and consultancy."
         }
+      ],
+      "benefits": [
+        {
+          "image":"/images/service-icons/gear.svg",
+          "title": "Benefits of engineering services",
+          "description":
+            "We can assist you at any part of the engineering value chain and any lifecycle state."
+        },
+        {
+          "image":"/images/service-icons/collab.svg",
+          "title": "Effective collaboration",
+          "description":
+            "We can assist you at any part of the engineering value chain and any lifecycle state."
+        },
+        {
+
+          "image":"/images/service-icons/deliver.svg",
+          "title": "Flexible delivery",
+          "description":
+            "We can assist you at any part of the engineering value chain and any lifecycle state."
+        },
+        {
+          "image":"/images/service-icons/graph.svg",
+          "title": "Measurable outcomes",
+          "description":
+            "We can assist you at any part of the engineering value chain and any lifecycle state."
+        },
+        {
+          "image":"/images/service-icons/fast.svg",
+          "title": "Delivery management",
+          "description":
+            "We can assist you at any part of the engineering value chain and any lifecycle state."
+        }
       ]
     },
     {
@@ -149,6 +224,39 @@
           "title": "Ongoing Support and Maintenance",
           "description":
             ""
+        }
+      ],
+      "benefits": [
+        {
+          "image":"/images/service-icons/gear.svg",
+          "title": "Benefits of engineering services",
+          "description":
+            "We can assist you at any part of the engineering value chain and any lifecycle state."
+        },
+        {
+          "image":"/images/service-icons/collab.svg",
+          "title": "Effective collaboration",
+          "description":
+            "We can assist you at any part of the engineering value chain and any lifecycle state."
+        },
+        {
+
+          "image":"/images/service-icons/deliver.svg",
+          "title": "Flexible delivery",
+          "description":
+            "We can assist you at any part of the engineering value chain and any lifecycle state."
+        },
+        {
+          "image":"/images/service-icons/graph.svg",
+          "title": "Measurable outcomes",
+          "description":
+            "We can assist you at any part of the engineering value chain and any lifecycle state."
+        },
+        {
+          "image":"/images/service-icons/fast.svg",
+          "title": "Delivery management",
+          "description":
+            "We can assist you at any part of the engineering value chain and any lifecycle state."
         }
       ]
     },
@@ -201,7 +309,40 @@
                         "description":
               "Assisting organizations in adopting digital technologies to improve business processes."
           }
-        ]
+        ],
+        "benefits": [
+        {
+          "image":"/images/service-icons/gear.svg",
+          "title": "Benefits of engineering services",
+          "description":
+            "We can assist you at any part of the engineering value chain and any lifecycle state."
+        },
+        {
+          "image":"/images/service-icons/collab.svg",
+          "title": "Effective collaboration",
+          "description":
+            "We can assist you at any part of the engineering value chain and any lifecycle state."
+        },
+        {
+
+          "image":"/images/service-icons/deliver.svg",
+          "title": "Flexible delivery",
+          "description":
+            "We can assist you at any part of the engineering value chain and any lifecycle state."
+        },
+        {
+          "image":"/images/service-icons/graph.svg",
+          "title": "Measurable outcomes",
+          "description":
+            "We can assist you at any part of the engineering value chain and any lifecycle state."
+        },
+        {
+          "image":"/images/service-icons/fast.svg",
+          "title": "Delivery management",
+          "description":
+            "We can assist you at any part of the engineering value chain and any lifecycle state."
+        }
+      ]
     },
     {
       "id": "digital_transformation",
@@ -251,6 +392,39 @@
           "title": "Continuous Support and Training",
           "description":
             "Offering ongoing technical support and training to ensure seamless adoption of new technologies and maximize the return on digital investments."
+        }
+      ],
+      "benefits": [
+        {
+          "image":"/images/service-icons/gear.svg",
+          "title": "Benefits of engineering services",
+          "description":
+            "We can assist you at any part of the engineering value chain and any lifecycle state."
+        },
+        {
+          "image":"/images/service-icons/collab.svg",
+          "title": "Effective collaboration",
+          "description":
+            "We can assist you at any part of the engineering value chain and any lifecycle state."
+        },
+        {
+
+          "image":"/images/service-icons/deliver.svg",
+          "title": "Flexible delivery",
+          "description":
+            "We can assist you at any part of the engineering value chain and any lifecycle state."
+        },
+        {
+          "image":"/images/service-icons/graph.svg",
+          "title": "Measurable outcomes",
+          "description":
+            "We can assist you at any part of the engineering value chain and any lifecycle state."
+        },
+        {
+          "image":"/images/service-icons/fast.svg",
+          "title": "Delivery management",
+          "description":
+            "We can assist you at any part of the engineering value chain and any lifecycle state."
         }
       ]
     },
@@ -302,6 +476,39 @@
           "title": "Robotics",
           "description":
             "Revolutionize your processes with advanced robotics designed for precision and reliability."
+        }
+      ],
+      "benefits": [
+        {
+          "image":"/images/service-icons/gear.svg",
+          "title": "Benefits of engineering services",
+          "description":
+            "We can assist you at any part of the engineering value chain and any lifecycle state."
+        },
+        {
+          "image":"/images/service-icons/collab.svg",
+          "title": "Effective collaboration",
+          "description":
+            "We can assist you at any part of the engineering value chain and any lifecycle state."
+        },
+        {
+
+          "image":"/images/service-icons/deliver.svg",
+          "title": "Flexible delivery",
+          "description":
+            "We can assist you at any part of the engineering value chain and any lifecycle state."
+        },
+        {
+          "image":"/images/service-icons/graph.svg",
+          "title": "Measurable outcomes",
+          "description":
+            "We can assist you at any part of the engineering value chain and any lifecycle state."
+        },
+        {
+          "image":"/images/service-icons/fast.svg",
+          "title": "Delivery management",
+          "description":
+            "We can assist you at any part of the engineering value chain and any lifecycle state."
         }
       ]
     }

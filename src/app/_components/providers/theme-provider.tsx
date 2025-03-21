@@ -28,7 +28,7 @@ export const theme = createTheme({
   },
   typography: {
     fontFamily: '"IBM Plex Sans", sans-serif',
-    fontSize: 14,
+    fontSize: 15,
   },
   components: {
     MuiButton: {

@@ -28,10 +28,13 @@ import { motion } from 'framer-motion'
 import { Numbers } from './_components/numbers'
 import { FramedImage } from './_components/framed-image'
 import { ServiceCarousel } from './_components/service-carousel'
+import { PartnersCarousel } from './_components/partners/PartnerCardCarousel'
 
 export default function Home() {
   return (
     <main>
+      <PartnersCarousel />
+
       <Container sx={{ my: { xs: 8, md: 16 }, overflow: 'hidden' }}>
         <motion.div
           variants={containerSync}
@@ -67,7 +70,6 @@ export default function Home() {
                 variants={slideLeft}
               >
                 <Box>
-           
                   <Chip
                     label="ABOUT COMPANY"
                     variant="outlined"
@@ -166,6 +168,47 @@ export default function Home() {
           <ServiceCarousel />
         </motion.div>
       </Container>
+
+      <Box
+        sx={{
+          background: 'url(/images/teams.jpg)',
+          backgroundPosition: 'center',
+          backgroundSize: 'cover',
+          position: 'relative',
+          py: { xs: 8 },
+          '&:before': {
+            background:
+              'linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.32), rgba(0, 0, 0, 0.5))',
+            content: '""',
+            position: 'absolute',
+            inset: 0,
+          },
+        }}
+      >
+        <Container sx={{ position: 'relative' }}>
+          <Chip label="OUTSOURCING SERVICES" color="secondary"></Chip>
+          <Typography
+            color="secondary"
+            variant="h3"
+            gutterBottom
+            fontWeight={'bold'}
+            sx={{ maxWidth: 700, mt: 4, mb: 6 }}
+          >
+            We excel in software solutions with a decade of expertise.
+          </Typography>
+
+          <Button
+            variant="outlined"
+            size="large"
+            LinkComponent={NextLink}
+            color="secondary"
+            href={'/outsourcing'}
+            sx={{ display: { xs: 'none', md: 'initial' } }}
+          >
+            View more
+          </Button>
+        </Container>
+      </Box>
 
       <Container sx={{ my: { xs: 8, md: 16 } }}>
         <motion.div
@@ -290,7 +333,13 @@ export default function Home() {
               </motion.div>
 
               <motion.div variants={opacity}>
-                <Typography color="secondary" maxWidth="md" mt={2} mb={4} textAlign={'center'}>
+                <Typography
+                  color="secondary"
+                  maxWidth="md"
+                  mt={2}
+                  mb={4}
+                  textAlign={'center'}
+                >
                   Explore our proven track record and credentials by downloading
                   our capability statement, which highlights our past clients
                   and government certifications.

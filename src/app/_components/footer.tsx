@@ -179,7 +179,7 @@ function Footer() {
                     <ListItemButton
                       aria-label={`Navigate to ${link.name} service`}
                       LinkComponent={NextLink}
-                      href={`/services?panel=${link.id}#${link.id}`}
+                      href={`/services/${link.id}`}
                     >
                       <ListItemText
                         primary={

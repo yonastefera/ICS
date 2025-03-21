@@ -4,6 +4,7 @@ import {
   AppBar,
   Box,
   Button,
+  ButtonGroup,
   Container,
   Drawer,
   IconButton,
@@ -12,6 +13,8 @@ import {
   ListItem,
   ListItemButton,
   ListItemText,
+  Menu,
+  MenuItem,
   Stack,
   Toolbar,
   Typography,
@@ -27,10 +30,20 @@ import { usePathname } from 'next/navigation'
 import CloseIcon from '@mui/icons-material/Close'
 import { motion } from 'framer-motion'
 import { container, opacity } from '@/animation'
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore'
+
+import services from '@/data/service-data.json'
 
 export const headerLinks = [
   { label: 'About Us', href: '/about-us' },
-  { label: 'Services', href: '/services' },
+  {
+    label: 'Services',
+    href: '/services',
+    subItems: services.map((link) => ({
+      label: link.name,
+      href: `/services/${link.id}`,
+    })),
+  },
   { label: 'Government', href: '/government' },
   { label: 'Outsourcing', href: '/outsourcing' },
 ]
@@ -44,6 +57,15 @@ export const Header = () => {
 
   const isOnLandingPage = pathName === '/'
   const bgColor = alpha(theme.palette.tertiary.main, 0.95)
+
+  const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null)
+  const open = Boolean(anchorEl)
+  const handleClick = (event: React.MouseEvent<HTMLElement>) => {
+    setAnchorEl(event.currentTarget)
+  }
+  const handleClose = () => {
+    setAnchorEl(null)
+  }
 
   return (
     <>
@@ -82,18 +104,77 @@ export const Header = () => {
               <Stack alignItems={'center'} gap={3}>
                 <Stack gap={2.5} display={{ xs: 'none', md: 'flex' }}>
                   {headerLinks.map((link) => (
-                    <Button
-                      variant="text"
-                      key={`desktop-${link.href}`}
-                      component={NextLink}
-                      href={link.href}
-                      color={pathName === link.href ? 'warning' : 'secondary'}
-                      sx={{
-                        fontWeight: pathName === link.href ? 'bold' : 'normal',
-                      }}
-                    >
-                      {link.label}
-                    </Button>
+                    <ButtonGroup key={`desktop-${link.href}`}>
+                      <Button
+                        variant="text"
+                        component={NextLink}
+                        href={link.href}
+                        color={
+                          pathName.startsWith(link.href)
+                            ? 'warning'
+                            : 'secondary'
+                        }
+                        sx={{
+                          fontWeight: pathName.startsWith(link.href)
+                            ? 'bold'
+                            : 'normal',
+                        }}
+                      >
+                        {link.label}
+                      </Button>
+                      {link.subItems && (
+                        <>
+                          {' '}
+                          <IconButton
+                            color={
+                              pathName.startsWith(link.href)
+                                ? 'warning'
+                                : 'secondary'
+                            }
+                            id="services-button"
+                            aria-controls={open ? 'service-menu' : undefined}
+                            aria-haspopup="true"
+                            aria-expanded={open ? 'true' : undefined}
+                            onClick={handleClick}
+                            size="small"
+                          >
+                            <ExpandMoreIcon />
+                          </IconButton>
+                          <Menu
+                            id="service-menu"
+                            aria-labelledby="services-button"
+                            anchorEl={anchorEl}
+                            open={open}
+                            onClose={handleClose}
+                            anchorOrigin={{
+                              vertical: 'bottom',
+                              horizontal: 'left',
+                            }}
+                            MenuListProps={{
+                              sx: { p: 2 },
+                            }}
+                          >
+                            {link.subItems.map((item) => (
+                              <Link
+                                component={NextLink}
+                                key={item.href}
+                                href={item.href}
+                                color='text.primary'
+                              >
+                                <MenuItem
+                                  key={`submenu-${item.href}`}
+                                  onClick={handleClose}
+                                  sx={{ py: 2, pl: 2, pr: 8 }}
+                                  aria-label={`Navigate to ${link.label} service`}
+                                >
+                                  {item.label}
+                                </MenuItem>
+                              </Link>
+                            ))}
+                          </Menu>
+                        </>
+                      )}
+                    </ButtonGroup>
                   ))}
                 </Stack>
 
